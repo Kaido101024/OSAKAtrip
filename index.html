@@ -6,226 +6,142 @@
     <title>大阪京都 6天5夜 終極完美行程</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap');
+
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-            --accent-color: #e67e22;
-            --bg-color: #f4f7f6;
-            --card-bg: #ffffff;
-            --text-main: #333333;
-            --text-light: #666666;
-            --border-color: #e1e8ed;
+            --ink:#17212b; --muted:#6b7785; --paper:#f6f7f5; --card:#fff;
+            --line:#e7ebe8; --blue:#2f6f8f; --blue-soft:#eaf4f8;
+            --orange:#d97836; --orange-soft:#fff2e8; --green:#4f8064;
+            --pink:#b55d78; --shadow:0 12px 34px rgba(31,45,55,.08);
+            --shadow-hover:0 18px 44px rgba(31,45,55,.13);
         }
+        *{box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{
+            margin:0;padding:34px 18px 70px;color:var(--ink);line-height:1.75;
+            font-family:'Noto Sans TC','Noto Sans JP',sans-serif;
+            background:
+              radial-gradient(circle at 8% 0%,rgba(78,126,151,.10),transparent 28rem),
+              radial-gradient(circle at 92% 18%,rgba(217,120,54,.08),transparent 26rem),
+              var(--paper);
+        }
+        .page{width:min(980px,100%);margin:auto}
+        a{color:var(--blue);text-decoration:none;font-weight:700;border-bottom:1px solid rgba(47,111,143,.25)}
+        a:hover{color:#1e5069;border-bottom-color:currentColor}
 
-        body {
-            background-color: var(--bg-color);
-            font-family: 'Noto Sans TC', sans-serif;
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 20px 15px;
-            max-width: 850px;
-            margin: 0 auto;
+        .hero{
+            position:relative;overflow:hidden;color:#fff;border-radius:28px;padding:42px 40px 36px;
+            margin-bottom:18px;
+            background:linear-gradient(135deg,rgba(22,55,72,.96),rgba(55,102,119,.9) 58%,rgba(208,112,54,.82));
+            box-shadow:0 20px 55px rgba(24,49,62,.20)
         }
+        .hero:before{content:"旅";position:absolute;right:-18px;top:-42px;font-size:220px;font-weight:900;line-height:1;opacity:.07}
+        .hero-kicker{
+            display:inline-flex;padding:6px 12px;border:1px solid rgba(255,255,255,.25);
+            border-radius:999px;background:rgba(255,255,255,.10);font-size:.82rem;letter-spacing:.08em
+        }
+        .hero h1{margin:14px 0 8px;font-size:clamp(2rem,5vw,3.2rem);line-height:1.2;letter-spacing:-.03em;font-weight:900}
+        .hero p{margin:0;max-width:720px;color:rgba(255,255,255,.86);font-size:1rem}
+        .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px}
+        .hero-stat{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.13);backdrop-filter:blur(8px)}
+        .hero-stat strong{display:block;color:#fff;font-size:1.05rem}
+        .hero-stat span{display:block;color:rgba(255,255,255,.68);font-size:.76rem}
 
-        .header-title {
-            text-align: center;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            font-weight: 900;
-            font-size: 1.8em;
-            letter-spacing: 1px;
+        .day-nav{
+            position:sticky;top:12px;z-index:10;display:flex;gap:7px;overflow-x:auto;
+            padding:9px;margin-bottom:18px;background:rgba(246,247,245,.88);
+            border:1px solid #e1e7e4;border-radius:16px;backdrop-filter:blur(14px);
+            box-shadow:0 8px 24px rgba(31,45,55,.06);scrollbar-width:none
         }
+        .day-nav::-webkit-scrollbar{display:none}
+        .day-nav a{flex:0 0 auto;border:0;padding:7px 13px;border-radius:999px;background:#fff;color:var(--muted);font-size:.82rem;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+        .day-nav a:hover{color:#fff;background:var(--blue)}
 
-        .card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 24px;
-            margin-bottom: 24px;
-            box-shadow: 0 8px 24px rgba(149, 157, 165, 0.1);
-            border: 1px solid rgba(0,0,0,0.02);
+        .card{
+            background:rgba(255,255,255,.95);border:1px solid #e2e7e4;border-radius:18px;
+            padding:28px;margin-bottom:20px;box-shadow:var(--shadow)
         }
+        .card:hover{box-shadow:var(--shadow-hover)}
+        .card h2{
+            display:flex;align-items:center;gap:10px;margin:0 0 22px;padding-bottom:14px;
+            border-bottom:1px solid var(--line);color:var(--ink);font-size:1.35rem;line-height:1.35
+        }
+        .card h2:after{content:"";flex:1;height:3px;max-width:48px;margin-left:auto;border-radius:999px;background:linear-gradient(90deg,var(--orange),#efbd86)}
+        ul{list-style:none;margin:0;padding:0}
+        li{position:relative;margin-bottom:13px;padding-left:23px}
+        li:before{content:"";position:absolute;left:4px;top:.78em;width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px var(--blue-soft)}
+        li:last-child{margin-bottom:0}
 
-        h2 {
-            color: var(--accent-color);
-            border-bottom: 2px solid #fcdeb3;
-            padding-bottom: 12px;
-            margin-top: 0;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 1.4em;
-        }
+        .day-card{scroll-margin-top:80px;overflow:hidden}
+        .day-card>h2{margin:-28px -28px 24px;padding:21px 28px;border:0;color:#fff;background:linear-gradient(135deg,#214d63,#37738d)}
+        .day-card:nth-of-type(5)>h2{background:linear-gradient(135deg,#596d63,#789582)}
+        .day-card:nth-of-type(6)>h2{background:linear-gradient(135deg,#6b5562,#9b687a)}
+        .day-card:nth-of-type(7)>h2{background:linear-gradient(135deg,#6c604a,#a08a62)}
+        .day-card>h2:after{background:rgba(255,255,255,.38)}
 
-        .time-slot {
-            margin-bottom: 20px;
-            border-left: 4px solid var(--secondary-color);
-            padding-left: 16px;
-            position: relative;
-        }
+        .time-slot{position:relative;margin:0 0 21px;padding:18px 20px 18px 21px;border:1px solid var(--line);border-radius:15px;background:#fff}
+        .time-slot:before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:4px;border-radius:0 5px 5px 0;background:var(--blue)}
+        .slot-title{display:inline-flex;align-items:center;gap:6px;margin-bottom:12px;padding:5px 11px;border-radius:999px;color:var(--blue);background:var(--blue-soft);font-size:.84rem;font-weight:800}
+        .slot-title:before{content:"◷"}
 
-        .slot-title {
-            font-weight: 700;
-            color: var(--secondary-color);
-            background: #ebf5fb;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.95em;
-            display: inline-block;
-            margin-bottom: 10px;
-            letter-spacing: 0.5px;
-        }
+        details{margin-top:10px;overflow:hidden;border:1px solid var(--line);border-radius:11px;background:#fafcfb}
+        summary{cursor:pointer;padding:9px 12px;color:var(--blue);font-size:.83rem;font-weight:800;list-style:none}
+        summary::-webkit-details-marker{display:none}
+        summary:before{content:"＋";margin-right:6px;color:var(--orange)}
+        details[open] summary:before{content:"－"}
+        .details-content{padding:11px 13px 13px;border-top:1px solid var(--line);color:var(--muted);background:#fff;font-size:.82rem}
+        .details-content b{color:var(--ink)}
 
-        a {
-            color: #2980b9;
-            text-decoration: none;
-            font-weight: 700;
-            transition: opacity 0.2s;
-        }
+        .tag{display:block;margin-top:8px;padding:8px 11px;border-radius:9px;font-size:.78rem;line-height:1.55}
+        .tag-buy{color:#a8551f;background:var(--orange-soft);border-left:3px solid var(--orange)}
+        .tag-ticket{color:#93405d;background:#fff0f4;border-left:3px solid var(--pink)}
+        .tag-info{color:#986118;background:#fff7e5;border-left:3px solid #e4a22a}
 
-        a:hover {
-            opacity: 0.7;
-            text-decoration: underline;
+        .route-box{
+            display:flex;align-items:center;justify-content:space-between;gap:16px;margin:-5px 0 22px;
+            padding:15px 17px;border:1px solid #cfe3eb;border-radius:14px;
+            background:linear-gradient(135deg,#f0f8fb,#fff)
         }
+        .route-box strong{display:block;color:#24586f;font-size:.92rem}
+        .route-box small{color:var(--muted)}
+        .route-btn{flex:0 0 auto;padding:9px 13px;border:0;border-radius:10px;background:var(--blue);color:#fff!important;box-shadow:0 5px 14px rgba(47,111,143,.22)}
+        .route-btn:hover{background:#24586f;color:#fff}
 
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+        .cost-box{margin-top:14px;padding:18px 19px;border-radius:14px;background:#edf6f0;border:1px solid #cfe4d5;border-left:4px solid var(--green)}
+        .cost-box-blue{background:var(--blue-soft);border-color:#cfe3eb;border-left-color:var(--blue)}
+        .cost-title{display:block;margin-bottom:11px;font-weight:900}
+        .text-green{color:var(--green)} .text-blue{color:var(--blue)} .text-orange{color:var(--orange);font-weight:900;font-size:1.06em}
+        .source-card{text-align:center;background:#eef2f1;box-shadow:none}
+        .source-card h2{justify-content:center;border:0}.source-card h2:after{display:none}
+        hr{border:0;border-top:1px dashed var(--line);margin:18px 0}
 
-        li {
-            margin-bottom: 12px;
-            position: relative;
-            padding-left: 20px;
+        @media(max-width:680px){
+            body{padding:16px 10px 45px}.hero{padding:30px 23px 25px;border-radius:22px}.hero h1{font-size:2rem}
+            .hero-stats{grid-template-columns:repeat(2,1fr)}.card{padding:19px;border-radius:15px}
+            .day-card>h2{margin:-19px -19px 20px;padding:18px 19px;font-size:1.15rem}
+            .time-slot{padding:15px 14px 15px 17px}.route-box{align-items:flex-start;flex-direction:column}
+            .route-btn{width:100%;text-align:center}
         }
-
-        li::before {
-            content: "•";
-            color: var(--secondary-color);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-            position: absolute;
-            left: 5px;
-        }
-
-        /* 標籤樣式設計 */
-        .tag {
-            display: block;
-            font-size: 0.85em;
-            margin-top: 6px;
-            padding: 6px 12px;
-            border-radius: 6px;
-            line-height: 1.5;
-        }
-
-        .tag-buy {
-            background: #fdf2e9;
-            color: #d35400;
-            font-weight: 700;
-            border-left: 3px solid #e67e22;
-        }
-
-        .tag-ticket {
-            background: #fce4ec;
-            color: #8e24aa;
-            font-weight: 700;
-            border-left: 3px solid #ab47bc;
-        }
-
-        .tag-info {
-            background: #fff8e1;
-            color: #f57c00;
-            font-weight: 700;
-            border-left: 3px solid #ffb300;
-        }
-
-        /* 下拉選單樣式 */
-        details {
-            background: #f8f9fa;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            margin-top: 8px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
-
-        summary {
-            padding: 12px 15px;
-            font-size: 0.9em;
-            font-weight: 700;
-            color: var(--primary-color);
-            background: #f1f3f5;
-            cursor: pointer;
-            list-style: none;
-            user-select: none;
-            display: flex;
-            align-items: center;
-        }
-
-        summary::-webkit-details-marker {
-            display: none;
-        }
-
-        summary::before {
-            content: "📍 ";
-            margin-right: 5px;
-        }
-
-        details[open] summary {
-            border-bottom: 1px solid var(--border-color);
-            background: #e9ecef;
-        }
-
-        .details-content {
-            padding: 12px 15px;
-            font-size: 0.85em;
-            color: var(--text-light);
-            background: #ffffff;
-        }
-
-        .details-content b {
-            color: var(--primary-color);
-        }
-
-        hr {
-            border: 0;
-            border-top: 1px dashed var(--border-color);
-            margin: 20px 0;
-        }
-
-        /* 花費區塊特調 */
-        .cost-box {
-            background: #eafaf1;
-            border: 1px solid #c3e6cb;
-            border-left: 5px solid #27ae60;
-            padding: 16px;
-            border-radius: 8px;
-            margin-top: 15px;
-        }
-        
-        .cost-box-blue {
-            background: #ebf5fb;
-            border: 1px solid #bce0fd;
-            border-left: 5px solid #2980b9;
-        }
-
-        .cost-title {
-            font-weight: 900;
-            font-size: 1.05em;
-            display: block;
-            margin-bottom: 10px;
-        }
-        
-        .text-green { color: #27ae60; }
-        .text-blue { color: #2980b9; }
-        .text-orange { color: #e67e22; font-weight: 900; font-size: 1.1em;}
     </style>
 </head>
 <body>
-
-    <div class="header-title">
+<div class="page">
+    <header class="hero">
+        <div class="hero-kicker">🎌 8/19 — 8/24 · 大阪京都 6天5夜</div>
+        <h1>大阪京都・完美自駕／美食之旅</h1>
+        <p>把景點、美食、購物與交通節奏排在一起。白天玩景，下午爆買，晚上吃好——每一天都留有彈性。</p>
+        <div class="hero-stats">
+            <div class="hero-stat"><strong>6 天 5 夜</strong><span>大阪固定住宿</span></div>
+            <div class="hero-stat"><strong>8/21</strong><span>琵琶湖自駕日</span></div>
+            <div class="hero-stat"><strong>3 人</strong><span>主要預約餐廳</span></div>
+            <div class="hero-stat"><strong>🛍️ 購物優先</strong><span>行程核心風格</span></div>
+        </div>
+    </header>
+    <nav class="day-nav" aria-label="行程快速導覽">
+        <a href="#day1">DAY 1</a><a href="#day2">DAY 2</a><a href="#day3">DAY 3</a>
+        <a href="#day4">DAY 4</a><a href="#day5">DAY 5</a><a href="#day6">DAY 6</a><a href="#cost">💰 預算</a>
+    </nav>
+    <div class="header-title" style="display:none;">🎌 大阪京都 6天5夜 完美自駕/美食之旅</div>
         🎌 大阪京都 6天5夜 完美自駕/美食之旅
     </div>
 
@@ -239,7 +155,7 @@
         </ul>
     </div>
 
-    <div class="card">
+    <div class="card day-card" id="day1">
         <h2>🗓️ Day 1 (8/19) 抵達大阪 & 臨空城血拚</h2>
         
         <div class="time-slot">
@@ -318,7 +234,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card day-card" id="day2">
         <h2>🗓️ Day 2 (8/20) 大阪市區 & 梅田夜景</h2>
         
         <div class="time-slot">
@@ -352,6 +268,14 @@
                         </div>
                     </details>
                 </li>
+                
+                    <div class="route-box">
+                        <div>
+                            <strong>🗺️ Day 3 自駕 Google Maps 路線</strong>
+                            <small>京都站取車 → 琵琶湖沿線 → 景點 → 京都站</small>
+                        </div>
+                        <a class="route-btn" href="https://maps.app.goo.gl/MuUcug2nJaCNpMH5A" target="_blank" rel="noopener">開啟路線 ↗</a>
+                    </div>
             </ul>
         </div>
 
@@ -412,7 +336,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card day-card" id="day3">
         <h2>🗓️ Day 3 (8/21) 琵琶湖自駕、京都一日遊</h2>
         
         <div class="time-slot">
@@ -500,7 +424,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card day-card" id="day4">
         <h2>🗓️ Day 4 (8/22) 木津市場、難波深度 & 泉南煙火大會</h2>
         
         <div class="time-slot">
@@ -583,7 +507,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card day-card" id="day5">
         <h2>🗓️ Day 5 (8/23) 嵐山、二條城與烏丸御池 & 梅田燒肉</h2>
         
         <div class="time-slot">
@@ -699,7 +623,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card day-card" id="day6">
         <h2>🗓️ Day 6 (8/24) 輕鬆返程</h2>
         <div class="time-slot">
             <span class="slot-title">早上</span>
@@ -737,7 +661,7 @@
         </div>
     </div>
 
-    <div class="card">
+    <div class="card" id="cost">
         <h2>💰 預估花費總結 (每人)</h2>
         
         <div class="cost-box">
@@ -777,5 +701,6 @@
         <p style="font-size:0.85em; color:#777; text-align:left;">※ 本行程之 JR/南海/地鐵 列車時刻皆參考常規班表排定。建議出發前一天透過上述網站，再次確認確切發車月台與即時時間，確保行程順暢！</p>
     </div>
 
+</div>
 </body>
 </html>
