@@ -115,6 +115,16 @@
             color: #adb5bd; font-size: 0.9em; text-align: center; padding: 20px;
         }
 
+        .route-box{
+            display:flex;align-items:center;justify-content:space-between;gap:16px;margin:15px 0 22px;
+            padding:15px 17px;border:1px solid #cfe3eb;border-radius:14px;
+            background:linear-gradient(135deg,#f0f8fb,#fff)
+        }
+        .route-box strong{display:block;color:#24586f;font-size:.92rem}
+        .route-box small{color:var(--muted)}
+        .route-btn{flex:0 0 auto;padding:9px 13px;border:0;border-radius:10px;background:var(--blue);color:#fff!important;box-shadow:0 5px 14px rgba(47,111,143,.22)}
+        .route-btn:hover{background:#24586f;color:#fff; border-bottom:0;}
+
         .cost-box{margin-top:14px;padding:18px 19px;border-radius:14px;background:#edf6f0;border:1px solid #cfe4d5;border-left:4px solid var(--green)}
         .cost-box-blue{background:var(--blue-soft);border-color:#cfe3eb;border-left-color:var(--blue)}
         .cost-title{display:block;margin-bottom:11px;font-weight:900}
@@ -127,6 +137,8 @@
             .hero-stats{grid-template-columns:repeat(2,1fr)}.card{padding:19px;border-radius:15px}
             .day-card>h2{margin:-19px -19px 20px;padding:18px 19px;font-size:1.15rem}
             .time-slot{padding:15px 14px 15px 17px}
+            .route-box{align-items:flex-start;flex-direction:column}
+            .route-btn{width:100%;text-align:center}
         }
     </style>
 </head>
@@ -258,7 +270,7 @@
         <div class="time-slot">
             <span class="slot-title">早上</span>
             <ul>
-                <li>09:30～10:30 前往 <a href="https://www.google.com/maps/search/?api=1&query=大阪天滿宮" class="spot" target="_blank">大阪天滿宮</a> 參拜
+                <li>09:30～10:00 前往 <a href="https://www.google.com/maps/search/?api=1&query=大阪天滿宮" class="spot" target="_blank">大阪天滿宮</a> 參拜
                     <details>
                         <summary>點擊展開：免轉車交通方式</summary>
                         <div class="details-content">
@@ -266,11 +278,19 @@
                         </div>
                     </details>
                 </li>
-                <li>10:45 抵達梅田 KITTE大阪 準備排隊午餐
+                <li>10:15～10:40 前往 <a href="https://www.google.com/maps/search/?api=1&query=露天神社+(お初天神)" class="spot" target="_blank">梅田露天神社 (お初天神)</a>
                     <details>
                         <summary>點擊展開：轉乘交通方式</summary>
                         <div class="details-content">
-                            從天滿宮旁的 <a href="https://www.google.com/maps/search/?api=1&query=南森町站" class="sta" target="_blank">南森町站</a> 搭乘地鐵谷町線至 <a href="https://www.google.com/maps/search/?api=1&query=東梅田站" class="sta" target="_blank">東梅田站</a> (僅1站，車程約 3 分鐘)，出站步行約 5-8 分鐘前往 KITTE大阪 💰 票價：約 190 円
+                            從天滿宮旁的 <a href="https://www.google.com/maps/search/?api=1&query=南森町站" class="sta" target="_blank">南森町站</a> 搭乘地鐵谷町線至 <a href="https://www.google.com/maps/search/?api=1&query=東梅田站" class="sta" target="_blank">東梅田站</a> (僅1站，車程約 3 分鐘)，出站步行約 5 分鐘即可抵達 💰 票價：約 190 円
+                        </div>
+                    </details>
+                </li>
+                <li>10:50 抵達梅田 KITTE大阪 準備排隊午餐
+                    <details>
+                        <summary>點擊展開：步行路線</summary>
+                        <div class="details-content">
+                            從露天神社步行約 10 分鐘即可抵達 KITTE大阪 (JR大阪站旁)。
                         </div>
                     </details>
                 </li>
@@ -317,9 +337,6 @@
         <div class="time-slot">
             <span class="slot-title">晚上</span>
             <ul>
-                <li>19:00 點心/隔日早餐：<a href="https://www.google.com/maps/search/?api=1&query=BOULANGERIE+BURDIGALA+大阪店" class="rest" target="_blank">BOULANGERIE BURDIGALA 大阪店</a>
-                    <span style="display:block;"><span class="tag tag-buy">🥐 備註：位於梅田 Herbis Plaza B2F，上觀景台前順路買好神級麵包！</span></span>
-                </li>
                 <li>19:30～21:00 前往 <a href="https://www.google.com/maps/search/?api=1&query=梅田空中庭園" class="spot" target="_blank">梅田空中庭園</a> 看百萬夜景
                     <details>
                         <summary>點擊展開：行程調整說明</summary>
@@ -363,6 +380,15 @@
                         </div>
                     </details>
                 </li>
+                
+                <div class="route-box">
+                    <div>
+                        <strong>🗺️ Day 3 自駕 Google Maps 路線</strong>
+                        <small>京都站取車 → 琵琶湖沿線 → 景點 → 京都站</small>
+                    </div>
+                    <a class="route-btn" href="https://maps.app.goo.gl/MuUcug2nJaCNpMH5A" target="_blank" rel="noopener">開啟路線 ↗</a>
+                </div>
+                
                 <li>10:00 景點：<a href="https://www.google.com/maps/search/?api=1&query=延暦寺" class="spot" target="_blank">比叡山 延曆寺</a>
                     <span style="display:block;"><span class="tag tag-info">🚗 車程：從京都車站出發約 45 分鐘。探訪世界文化遺產！</span></span>
                 </li>
@@ -442,8 +468,8 @@
             <span class="slot-title">早餐</span>
             <ul>
                 <li>出發：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a></li>
-                <li>選項 1：<a href="https://www.google.com/maps/search/?api=1&query=海鮮丼専門店+木津+魚市食堂" class="rest" target="_blank">海鮮丼専門店 木津 魚市食堂</a></li>
-                <li>選項 2：<a href="https://www.google.com/maps/search/?api=1&query=木津壽司+まるよし" class="rest" target="_blank">木津壽司 Maruyoshi (まるよし)</a>
+                <li>🍽️ <b>Plan A</b>：<a href="https://www.google.com/maps/search/?api=1&query=海鮮丼専門店+木津+魚市食堂" class="rest" target="_blank">海鮮丼専門店 木津 魚市食堂</a></li>
+                <li>🍽️ <b>Plan B</b>：<a href="https://www.google.com/maps/search/?api=1&query=木津壽司+まるよし" class="rest" target="_blank">木津壽司 Maruyoshi (まるよし)</a>
                     <details>
                         <summary>點擊展開：步行路線</summary>
                         <div class="details-content">從飯店步行至<a href="https://www.google.com/maps/search/?api=1&query=木津市場" class="spot" target="_blank">木津市場</a>，約 15 分鐘可抵達。</div>
@@ -643,8 +669,8 @@
         <div class="time-slot">
             <span class="slot-title">早餐</span>
             <ul>
-                <li>出發：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a> (辦理退房)</li>
                 <li>09:00 起床與整理行李</li>
+                <li>出發：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a> (辦理退房)</li>
             </ul>
         </div>
         
@@ -799,12 +825,25 @@
     </div>
 
     <div class="source-card card">
-        <h2 style="justify-content: center;">🔗 交通時刻查詢推薦 (資料來源)</h2>
+        <h2 style="justify-content: center;">🔗 交通時刻查詢推薦與搭乘路線清單</h2>
         <div style="margin: 15px 0;">
             <a href="https://www.jr-odekake.net/" class="link" target="_blank" style="display:inline-block; margin-right:15px;">🚆 JR西日本官方時刻表</a>
             <a href="https://transit.yahoo.co.jp/" class="link" target="_blank" style="display:inline-block;">🧭 Yahoo!乘換案內</a>
         </div>
-        <p style="font-size:0.85em; color:var(--muted); text-align:left;">※ 本行程之 JR/南海/地鐵 列車時刻皆參考常規班表排定。建議出發前一天透過上述網站，再次確認確切發車月台與即時時間，確保行程順暢！</p>
+        
+        <div style="text-align:left; background:#fff; padding:15px; border-radius:8px; margin-bottom:15px; border:1px solid var(--line);">
+            <strong style="color:var(--blue); display:block; margin-bottom:8px;">🚃 本趟旅程涵蓋之主要鐵路線：</strong>
+            <ul style="font-size:0.85em; color:var(--ink); padding-left:10px;">
+                <li><b>【大阪 ⇌ 京都】</b> JR西日本 <strong style="color:#d35400;">「JR京都線」</strong> (搭乘新快速)</li>
+                <li><b>【京都 ⇌ 龜岡/嵐山】</b> JR西日本 <strong style="color:#8e44ad;">「JR嵯峨野線」(山陰本線)</strong></li>
+                <li><b>【機場 ⇌ 市區】</b> 南海電鐵 <strong>「空港急行」</strong> / JR西日本 <strong>「關空快速」</strong></li>
+                <li><b>【大阪 ⇌ 樽井(煙火)】</b> 南海電鐵 <strong>「南海本線」</strong></li>
+                <li><b>【京都 ⇌ 琵琶湖】</b> JR西日本 <strong>「JR湖西線」</strong> (搭乘新快速至近江高島)</li>
+                <li><b>【市區移動】</b> 大阪地下鐵 (御堂筋線、堺筋線、谷町線等)</li>
+            </ul>
+        </div>
+        
+        <p style="font-size:0.85em; color:var(--muted); text-align:left; margin:0;">※ 查詢時刻表時，請直接輸入上述路線或起訖站名。建議出發前一天透過上述網站，再次確認確切發車月台與即時時間，確保行程順暢！</p>
     </div>
 
 </div>
