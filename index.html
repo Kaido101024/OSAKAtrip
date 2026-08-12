@@ -32,12 +32,12 @@
         a:hover { opacity:0.7; }
         
         /* ================= 超連結顏色分類 ================= */
-        a.shop  { color: #5c8a3f; border-bottom-color: rgba(92,138,63,.3); }   /* 抹茶色：購物景點 */
-        a.spot  { color: #c48b59; border-bottom-color: rgba(196,139,89,.3); }  /* 奶茶色：其他景點 */
-        a.rest  { color: #d69800; border-bottom-color: rgba(214,152,0,.3); }   /* 黃金色：餐廳 (加深確保閱讀性) */
-        a.sta   { color: #2980b9; border-bottom-color: rgba(41,128,185,.3); }  /* 藍色：車站 */
-        a.hotel { color: #7d3c98; border-bottom-color: rgba(125,60,152,.3); }  /* 高貴紫：飯店 */
-        a.link  { color: #8e44ad; border-bottom-color: rgba(142,68,173,.3); }  /* 一般連結紫 */
+        a.shop  { color: #6b8e23; border-bottom-color: rgba(107,142,35,.3); }   /* 抹茶色：購物景點 */
+        a.spot  { color: #b58253; border-bottom-color: rgba(181,130,83,.3); }   /* 奶茶色：其他景點 */
+        a.rest  { color: #d49a00; border-bottom-color: rgba(212,154,0,.3); }    /* 黃金色：餐廳 (加深確保白底閱讀性) */
+        a.sta   { color: #2980b9; border-bottom-color: rgba(41,128,185,.3); }   /* 藍色：車站 */
+        a.hotel { color: #7d3c98; border-bottom-color: rgba(125,60,152,.3); }   /* 高貴紫：飯店 */
+        a.link  { color: #8e44ad; border-bottom-color: rgba(142,68,173,.3); }   /* 一般連結紫 */
         /* ================================================== */
 
         .hero{
@@ -103,7 +103,7 @@
         .details-content{padding:11px 13px 13px;border-top:1px solid var(--line);color:var(--muted);background:#fff;font-size:.82rem}
         .details-content b{color:var(--ink)}
 
-        .tag{display:block;margin-top:8px;padding:8px 11px;border-radius:9px;font-size:.78rem;line-height:1.55}
+        .tag{display:inline-block;margin-top:8px;padding:4px 10px;border-radius:8px;font-size:.78rem;line-height:1.55}
         .tag-buy{color:#a8551f;background:var(--orange-soft);border-left:3px solid var(--orange)}
         .tag-ticket{color:#93405d;background:#fff0f4;border-left:3px solid var(--pink)}
         .tag-info{color:#986118;background:#fff7e5;border-left:3px solid #e4a22a}
@@ -150,7 +150,8 @@
     
     <nav class="day-nav" aria-label="行程快速導覽">
         <a href="#day1">DAY 1</a><a href="#day2">DAY 2</a><a href="#day3">DAY 3</a>
-        <a href="#day4">DAY 4</a><a href="#day5">DAY 5</a><a href="#day6">DAY 6</a><a href="#cost">💰 預算</a>
+        <a href="#day4">DAY 4</a><a href="#day5">DAY 5</a><a href="#day6">DAY 6</a>
+        <a href="#ramen">🍜 拉麵百名店</a><a href="#cost">💰 預算</a>
     </nav>
 
     <div class="card">
@@ -211,7 +212,7 @@
                 </li>
                 <hr>
                 <li>購物點：<a href="https://www.google.com/maps/search/?api=1&query=JINS+難波" class="shop" target="_blank">JINS難波</a>
-                    <span class="tag tag-buy">🛍️ 購買物品：配眼鏡</span>
+                    <span style="display:block;"><span class="tag tag-buy">🛍️ 購買物品：配眼鏡</span></span>
                     <details>
                         <summary>點擊展開：難波站交通方式</summary>
                         <div class="details-content">
@@ -233,9 +234,9 @@
             <span class="slot-title">晚上</span>
             <ul>
                 <li>20:00～20:30 行程：<a href="https://www.google.com/maps/search/?api=1&query=法善寺" class="spot" target="_blank">法善寺</a></li>
-                <li>20:30～22:00 行程：<a href="https://www.google.com/maps/search/?api=1&query=道頓堀商店街" class="spot" target="_blank">道頓堀商店街</a> 逛街</li>
+                <li>20:30～22:00 行程：<a href="https://www.google.com/maps/search/?api=1&query=道頓堀商店街" class="shop" target="_blank">道頓堀商店街</a> 逛街</li>
                 <li>(可考慮) 澡堂：<a href="https://www.google.com/maps/search/?api=1&query=湯源郷+太平のゆ+なんば店" class="spot" target="_blank">湯源郷 太平のゆ なんば店</a>
-                    <span class="tag tag-buy">♨️ 備註：費用約 850 円，營業至 25:00 打烊</span>
+                    <span style="display:block;"><span class="tag tag-buy">♨️ 備註：費用約 850 円，營業至 25:00 打烊</span></span>
                 </li>
                 <li>返回：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a></li>
             </ul>
@@ -284,7 +285,7 @@
             <span class="slot-title">午餐</span>
             <ul>
                 <li>10:50 現場排隊：<a href="https://www.google.com/maps/search/?api=1&query=すき焼+しゃぶしゃぶつかだ+KITTE大阪店" class="rest" target="_blank">すき焼 しゃぶしゃぶつかだ KITTE大阪店</a>
-                    <span class="tag tag-info">🍲 備註：餐廳 11:00 開門！因無法訂位，建議 10:50 準時抵達現場排第一批入場最完美！</span>
+                    <span style="display:block;"><span class="tag tag-info">🍲 備註：餐廳 11:00 開門！因無法訂位，建議 10:50 準時抵達現場排第一批入場最完美！</span></span>
                 </li>
             </ul>
         </div>
@@ -292,14 +293,14 @@
         <div class="time-slot">
             <span class="slot-title">下午</span>
             <ul>
-                <li>12:30～17:00 <a href="https://www.google.com/maps/search/?api=1&query=梅田" class="spot" target="_blank">梅田商圈</a> 購物
+                <li>12:30～17:00 <a href="https://www.google.com/maps/search/?api=1&query=梅田" class="shop" target="_blank">梅田商圈</a> 購物
                     <details>
                         <summary>點擊展開：步行路線</summary>
                         <div class="details-content">吃飽後直接在梅田各大商場間步行逛街。</div>
                     </details>
                 </li>
                 <li>購物點：<a href="https://www.google.com/maps/search/?api=1&query=Alpen+OSAKA" class="shop" target="_blank">Alpen OSAKA</a>、<a href="https://www.google.com/maps/search/?api=1&query=asics+walking+梅田" class="shop" target="_blank">asics walking 梅田店</a>
-                    <span class="tag tag-buy">🛍️ 購買物品：高爾夫球袋、ON跑鞋、HOKA跑鞋、asics鞋款</span>
+                    <span style="display:block;"><span class="tag tag-buy">🛍️ 購買物品：高爾夫球袋、ON跑鞋、HOKA跑鞋、asics鞋款</span></span>
                 </li>
             </ul>
         </div>
@@ -308,7 +309,7 @@
             <span class="slot-title">晚餐</span>
             <ul>
                 <li>17:30 🍖 <b>確定預約</b>：<a href="https://www.google.com/maps/search/?api=1&query=炭焼+うな富士+大阪梅田店" class="rest" target="_blank">炭焼 うな富士 (Sumiyaki Unafuji) 大阪梅田店</a>
-                    <span class="tag tag-ticket">📌 預約資訊：3人 / 8月20日 (週四) 下午 5:30 (桌席)</span>
+                    <span style="display:block;"><span class="tag tag-ticket">📌 預約資訊：3人 / 8月20日 (週四) 下午 5:30 (桌席)</span></span>
                     <details>
                         <summary>點擊展開：步行路線</summary>
                         <div class="details-content">餐廳位於「GRAND GREEN OSAKA 南館 3F」，逛完街走過去吃超高檔鰻魚飯剛剛好！</div>
@@ -352,7 +353,7 @@
             <span class="slot-title">早上 (出發與租車)</span>
             <ul>
                 <li>09:00 抵達京都站 ➔ 辦理取車 ➔ 驅車前往 <a href="https://www.google.com/maps/search/?api=1&query=白鬚神社" class="spot" target="_blank">白鬚神社</a>
-                    <span class="tag tag-info">⚠️ 必備文件：務必攜帶「台灣駕照正本」與「日文譯本」！</span>
+                    <span style="display:block;"><span class="tag tag-info">⚠️ 必備文件：務必攜帶「台灣駕照正本」與「日文譯本」！</span></span>
                     <details>
                         <summary>點擊展開：前往京都轉乘與租車細節</summary>
                         <div class="details-content">
@@ -403,7 +404,7 @@
                     </details>
                 </li>
                 <li>17:30～20:00 行程：<a href="https://www.google.com/maps/search/?api=1&query=京都塔" class="spot" target="_blank">京都塔</a> & <a href="https://www.google.com/maps/search/?api=1&query=teamLab+Biovortex+Kyoto" class="spot" target="_blank">teamLab Biovortex Kyoto</a>
-                    <span class="tag tag-buy">📸 備註：還車後走路就能輕鬆到達這兩個點，逛完剛好在車站周邊吃晚餐！</span>
+                    <span style="display:block;"><span class="tag tag-buy">📸 備註：還車後走路就能輕鬆到達這兩個點，逛完剛好在車站周邊吃晚餐！</span></span>
                 </li>
             </ul>
         </div>
@@ -444,7 +445,7 @@
                 <li>🍽️ <b>Plan B</b>：<a href="https://www.google.com/maps/search/?api=1&query=木津壽司+まるよし" class="rest" target="_blank">木津壽司 Maruyoshi (まるよし)</a>
                     <details>
                         <summary>點擊展開：步行路線</summary>
-                        <div class="details-content">從飯店步行至<a href="https://www.google.com/maps/search/?api=1&query=木津市場" class="spot" target="_blank">木津市場</a>，約 15 分鐘可抵達。</div>
+                        <div class="details-content">從飯店步行至<a href="https://www.google.com/maps/search/?api=1&query=木津市場" class="shop" target="_blank">木津市場</a>，約 15 分鐘可抵達。</div>
                     </details>
                 </li>
             </ul>
@@ -460,7 +461,7 @@
                     </details>
                 </li>
                 <li>11:30 前往 <a href="https://www.google.com/maps/search/?api=1&query=千日前道具屋筋商店街" class="shop" target="_blank">千日前道具屋筋</a>
-                    <span class="tag tag-buy">🛍️ 購買物品：買鐵鍋</span>
+                    <span style="display:block;"><span class="tag tag-buy">🛍️ 購買物品：買鐵鍋</span></span>
                     <details>
                         <summary>點擊展開：步行路線</summary>
                         <div class="details-content">從八阪神社返回難波周邊，步行約 10-15 分鐘。</div>
@@ -480,14 +481,14 @@
             <span class="slot-title">下午</span>
             <ul>
                 <li>13:30～15:30 購物點：<a href="https://www.google.com/maps/search/?api=1&query=つるやゴルフ+本店" class="shop" target="_blank">つるやゴルフ 本店 (Golf Tsuruya Main Store)</a>
-                    <span class="tag tag-buy">🛍️ 購買物品：高爾夫球具/用品</span>
+                    <span style="display:block;"><span class="tag tag-buy">🛍️ 購買物品：高爾夫球具/用品</span></span>
                     <details>
                         <summary>點擊展開：前往本店交通方式</summary>
                         <div class="details-content">從 <a href="https://www.google.com/maps/search/?api=1&query=難波站" class="sta" target="_blank">難波站</a> 搭乘 <b>地鐵御堂筋線</b> 至 <a href="https://www.google.com/maps/search/?api=1&query=本町站" class="sta" target="_blank">本町站</a> (車程 4 分鐘)，出站即達 💰 票價：180 円。</div>
                     </details>
                 </li>
                 <li>16:00～20:00 前往 <a href="https://www.google.com/maps/search/?api=1&query=泉南臨空公園" class="spot" target="_blank">泉州夢花火 (泉南煙火大會)</a>
-                    <span class="tag tag-info">💡 <a href="https://senshuhanabi.com/" class="link" target="_blank">點此進入官方網站</a> 查詢最新天氣公告、延期狀況與 Live 音樂展演排程。</span>
+                    <span style="display:block;"><span class="tag tag-info">💡 <a href="https://senshuhanabi.com/" class="link" target="_blank">點此進入官方網站</a> 查詢最新天氣公告、延期狀況與 Live 音樂展演排程。</span></span>
                     <details>
                         <summary>點擊展開：本町 ➔ 煙火會場交通</summary>
                         <div class="details-content">從本町搭地鐵回 <a href="https://www.google.com/maps/search/?api=1&query=難波站" class="sta" target="_blank">難波站</a> (4分鐘)，轉搭南海本線至 <a href="https://www.google.com/maps/search/?api=1&query=樽井站" class="sta" target="_blank">樽井站</a> (急行車程約 45 分鐘)，下車步行約 10 分鐘到海邊會場 💰 票價：地鐵180円 + 南海780円 = 約 960 円</div>
@@ -548,14 +549,14 @@
                 </li>
                 <li>10:00 抵達 <a href="https://www.google.com/maps/search/?api=1&query=小火車龜岡站" class="sta" target="_blank">小火車龜岡站</a> 等候上車</li>
                 <li>10:30～10:50 搭乘 <a href="https://www.google.com/maps/search/?api=1&query=嵯峨野觀光鐵道" class="spot" target="_blank">嵯峨野小火車</a> (龜岡發車 ➔ 嵐山下車)
-                    <span class="tag tag-ticket">🎫 已訂票資訊 (8/23)<br>列車：嵯峨野4号<br>時間：10:30 トロッコ亀岡 出發 ➔ 10:50 トロッコ嵐山 抵達<br>座位：2号車-7A、2号車-7C、2号車-7D (3人)</span>
+                    <span style="display:block;"><span class="tag tag-ticket">🎫 已訂票資訊 (8/23)<br>列車：嵯峨野4号<br>時間：10:30 トロッコ亀岡 出發 ➔ 10:50 トロッコ嵐山 抵達<br>座位：2号車-7A、2号車-7C、2号車-7D (3人)</span></span>
                     <details>
                         <summary>點擊展開：乘車提醒</summary>
                         <div class="details-content">當天請出示乘車 QR Code 驗票使用。車程約 20 分鐘。</div>
                     </details>
                 </li>
                 <li>11:00～13:00 漫步 <a href="https://www.google.com/maps/search/?api=1&query=嵐山竹林小徑" class="spot" target="_blank">嵐山竹林小徑</a> 往 <a href="https://www.google.com/maps/search/?api=1&query=渡月橋" class="spot" target="_blank">渡月橋</a> 方向
-                    <span class="tag tag-buy">🍡 散步點心：<a href="https://www.google.com/maps/search/?api=1&query=中村屋+総本店" class="rest" target="_blank">中村屋 總本店</a> (炸肉餅)、<a href="https://www.google.com/maps/search/?api=1&query=新八茶屋" class="rest" target="_blank">新八茶屋</a> (冰淇淋)</span>
+                    <span style="display:block;"><span class="tag tag-buy">🍡 散步點心：<a href="https://www.google.com/maps/search/?api=1&query=中村屋+総本店" class="rest" target="_blank">中村屋 總本店</a> (炸肉餅)、<a href="https://www.google.com/maps/search/?api=1&query=新八茶屋" class="rest" target="_blank">新八茶屋</a> (冰淇淋)</span></span>
                 </li>
             </ul>
         </div>
@@ -591,7 +592,7 @@
                     </details>
                 </li>
                 <li>16:30～17:45 點心時間：烏丸御池周邊麵包名店
-                    <span class="tag tag-buy">🥐 購買點：<a href="https://www.google.com/maps/search/?api=1&query=ファイブラン" class="rest" target="_blank">fiveran (ファイブラン)</a> & <a href="https://www.google.com/maps/search/?api=1&query=Flip+up!" class="rest" target="_blank">Flip up! (フリップアップ)</a><br>⚠️ 備註：這兩間店都在御金神社走回烏丸御池站的路上。</span>
+                    <span style="display:block;"><span class="tag tag-buy">🥐 購買點：<a href="https://www.google.com/maps/search/?api=1&query=ファイブラン" class="rest" target="_blank">fiveran (ファイブラン)</a> & <a href="https://www.google.com/maps/search/?api=1&query=Flip+up!" class="rest" target="_blank">Flip up! (フリップアップ)</a><br>⚠️ 備註：這兩間店都在御金神社走回烏丸御池站的路上。</span></span>
                 </li>
                 <li>17:45 準備搭車前往大阪梅田（準備吃大餐）
                     <details>
@@ -610,7 +611,7 @@
             <span class="slot-title">晚餐</span>
             <ul>
                 <li>19:30 🍖 <b>確定預約</b>：<a href="https://www.google.com/maps/search/?api=1&query=Yakiniku+Hormone+Uchida+梅田" class="rest" target="_blank">Yakiniku Hormone Uchida</a>
-                    <span class="tag tag-ticket">📌 預約資訊：3人 / 8月23日 (週日) 下午 7:30</span>
+                    <span style="display:block;"><span class="tag tag-ticket">📌 預約資訊：3人 / 8月23日 (週日) 下午 7:30</span></span>
                     <details>
                         <summary>點擊展開：步行路線</summary>
                         <div class="details-content">從 <a href="https://www.google.com/maps/search/?api=1&query=JR大阪站" class="sta" target="_blank">JR大阪站</a>/<a href="https://www.google.com/maps/search/?api=1&query=梅田站" class="sta" target="_blank">梅田站</a> 出站後步行前往 (位於梅田堂山町)，非常順路！</div>
@@ -667,6 +668,60 @@
                     </details>
                 </li>
                 <li>16:15 搭乘 CX565 航班返家，旅途圓滿結束！</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 新增：拉麵百名店區塊 -->
+    <div class="card" id="ramen">
+        <h2>🍜 食べログ ラーメン百名店 (近三年入選・依地區分類)</h2>
+        <p style="font-size:0.85em; color:var(--muted); margin-top:-15px; margin-bottom:20px;">※ 嚴選近三年獲得 Tabelog Ramen WEST/OSAKA 百名店，且位於行程周邊的頂級神店。</p>
+        
+        <div class="time-slot" style="border-left-color: #e74c3c;">
+            <span class="slot-title" style="color: #e74c3c; background: #fdedec;">📍 京都車站周邊</span>
+            <ul>
+                <li><a href="https://tabelog.com/kyoto/A2601/A260101/26000873/" class="rest" target="_blank">本家 第一旭 本店</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.77</span></span>
+                </li>
+                <li><a href="https://tabelog.com/kyoto/A2601/A260101/26000791/" class="rest" target="_blank">新福菜館 本店</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.75</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot" style="border-left-color: #3498db;">
+            <span class="slot-title" style="color: #3498db; background: #ebf5fb;">📍 梅田車站 / 大阪站周邊</span>
+            <ul>
+                <li><a href="https://tabelog.com/osaka/A2701/A270101/27104786/" class="rest" target="_blank">麦と麺助 新梅田中津店</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.85 (人氣極高)</span></span>
+                </li>
+                <li><a href="https://tabelog.com/osaka/A2701/A270101/27090835/" class="rest" target="_blank">京都 麺屋たけ井 阪急梅田店</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.74</span></span>
+                </li>
+                <li><a href="https://tabelog.com/osaka/A2701/A270101/27101888/" class="rest" target="_blank">銀座 篝 ルクア大阪店</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.73</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot" style="border-left-color: #f1c40f;">
+            <span class="slot-title" style="color: #f39c12; background: #fef5e7;">📍 心齋橋 / 道頓堀周邊</span>
+            <ul>
+                <li><a href="https://tabelog.com/osaka/A2701/A270201/27086438/" class="rest" target="_blank">鶏Soba 座銀 にぼし店</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.75 (位於心齋橋)</span></span>
+                </li>
+                <li><a href="https://tabelog.com/osaka/A2701/A270201/27101889/" class="rest" target="_blank">いかれたヌードル フィッシュトンズ</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.76 (位於心齋橋周邊)</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot" style="border-left-color: #2ecc71;">
+            <span class="slot-title" style="color: #27ae60; background: #eafaf1;">📍 難波車站周邊</span>
+            <ul>
+                <li><a href="https://tabelog.com/osaka/A2701/A270202/27084042/" class="rest" target="_blank">麺屋 丈六 なんば店</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.78</span></span>
+                </li>
             </ul>
         </div>
     </div>
