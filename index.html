@@ -34,7 +34,7 @@
         /* ================= 超連結顏色分類 ================= */
         a.shop  { color: #6b8e23; border-bottom-color: rgba(107,142,35,.3); }   /* 抹茶色：購物景點 */
         a.spot  { color: #b58253; border-bottom-color: rgba(181,130,83,.3); }   /* 奶茶色：其他景點 */
-        a.rest  { color: #d49a00; border-bottom-color: rgba(212,154,0,.3); }    /* 黃金色：餐廳 (加深確保白底閱讀性) */
+        a.rest  { color: #d49a00; border-bottom-color: rgba(212,154,0,.3); }    /* 黃金色：餐廳 */
         a.sta   { color: #2980b9; border-bottom-color: rgba(41,128,185,.3); }   /* 藍色：車站 */
         a.hotel { color: #7d3c98; border-bottom-color: rgba(125,60,152,.3); }   /* 高貴紫：飯店 */
         a.link  { color: #8e44ad; border-bottom-color: rgba(142,68,173,.3); }   /* 一般連結紫 */
@@ -108,15 +108,12 @@
         .tag-ticket{color:#93405d;background:#fff0f4;border-left:3px solid var(--pink)}
         .tag-info{color:#986118;background:#fff7e5;border-left:3px solid #e4a22a}
 
-        .route-box{
-            display:flex;align-items:center;justify-content:space-between;gap:16px;margin:15px 0 22px;
-            padding:15px 17px;border:1px solid #cfe3eb;border-radius:14px;
-            background:linear-gradient(135deg,#f0f8fb,#fff)
+        .coupon-img-placeholder {
+            display: block; width: 100%; max-width: 350px; height: 180px; 
+            background: #f1f3f5; border: 2px dashed #ced4da; border-radius: 12px;
+            margin: 10px 0; display: flex; align-items: center; justify-content: center;
+            color: #adb5bd; font-size: 0.9em; text-align: center; padding: 20px;
         }
-        .route-box strong{display:block;color:#24586f;font-size:.92rem}
-        .route-box small{color:var(--muted)}
-        .route-btn{flex:0 0 auto;padding:9px 13px;border:0;border-radius:10px;background:var(--blue);color:#fff!important;box-shadow:0 5px 14px rgba(47,111,143,.22)}
-        .route-btn:hover{background:#24586f;color:#fff; border-bottom:0;}
 
         .cost-box{margin-top:14px;padding:18px 19px;border-radius:14px;background:#edf6f0;border:1px solid #cfe4d5;border-left:4px solid var(--green)}
         .cost-box-blue{background:var(--blue-soft);border-color:#cfe3eb;border-left-color:var(--blue)}
@@ -129,8 +126,7 @@
             body{padding:16px 10px 45px}.hero{padding:30px 23px 25px;border-radius:22px}.hero h1{font-size:2rem}
             .hero-stats{grid-template-columns:repeat(2,1fr)}.card{padding:19px;border-radius:15px}
             .day-card>h2{margin:-19px -19px 20px;padding:18px 19px;font-size:1.15rem}
-            .time-slot{padding:15px 14px 15px 17px}.route-box{align-items:flex-start;flex-direction:column}
-            .route-btn{width:100%;text-align:center}
+            .time-slot{padding:15px 14px 15px 17px}
         }
     </style>
 </head>
@@ -151,7 +147,7 @@
     <nav class="day-nav" aria-label="行程快速導覽">
         <a href="#day1">DAY 1</a><a href="#day2">DAY 2</a><a href="#day3">DAY 3</a>
         <a href="#day4">DAY 4</a><a href="#day5">DAY 5</a><a href="#day6">DAY 6</a>
-        <a href="#ramen">🍜 拉麵百名店</a><a href="#cost">💰 預算</a>
+        <a href="#coupons">🏷️ 優惠券</a><a href="#ramen">🍜 拉麵百名店</a><a href="#cost">💰 預算</a>
     </nav>
 
     <div class="card">
@@ -321,6 +317,9 @@
         <div class="time-slot">
             <span class="slot-title">晚上</span>
             <ul>
+                <li>19:00 點心/隔日早餐：<a href="https://www.google.com/maps/search/?api=1&query=BOULANGERIE+BURDIGALA+大阪店" class="rest" target="_blank">BOULANGERIE BURDIGALA 大阪店</a>
+                    <span style="display:block;"><span class="tag tag-buy">🥐 備註：位於梅田 Herbis Plaza B2F，上觀景台前順路買好神級麵包！</span></span>
+                </li>
                 <li>19:30～21:00 前往 <a href="https://www.google.com/maps/search/?api=1&query=梅田空中庭園" class="spot" target="_blank">梅田空中庭園</a> 看百萬夜景
                     <details>
                         <summary>點擊展開：行程調整說明</summary>
@@ -339,72 +338,67 @@
     </div>
 
     <div class="card day-card" id="day3">
-        <h2>🗓️ Day 3 (8/21) 琵琶湖自駕、京都一日遊</h2>
+        <h2>🗓️ Day 3 (8/21) 琵琶湖自駕、神社會車一日遊</h2>
         
         <div class="time-slot">
             <span class="slot-title">早餐</span>
             <ul>
                 <li>出發：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a></li>
-                <li>餐點：駅弁 (車站便當)</li>
+                <li>餐點：享用前一晚買好的 BURDIGALA 麵包</li>
             </ul>
         </div>
 
         <div class="time-slot">
             <span class="slot-title">早上 (出發與租車)</span>
             <ul>
-                <li>09:00 抵達京都站 ➔ 辦理取車 ➔ 驅車前往 <a href="https://www.google.com/maps/search/?api=1&query=白鬚神社" class="spot" target="_blank">白鬚神社</a>
+                <li>09:00 抵達京都站 ➔ 辦理取車 ➔ 開始自駕環湖之旅
                     <span style="display:block;"><span class="tag tag-info">⚠️ 必備文件：務必攜帶「台灣駕照正本」與「日文譯本」！</span></span>
                     <details>
                         <summary>點擊展開：前往京都轉乘與租車細節</summary>
                         <div class="details-content">
                             1️⃣ <b><a href="https://www.google.com/maps/search/?api=1&query=難波站" class="sta" target="_blank">難波站</a> ➔ 梅田/<a href="https://www.google.com/maps/search/?api=1&query=JR大阪站" class="sta" target="_blank">JR大阪站</a> (車程 9 分鐘)：</b>搭乘地鐵御堂筋線<br>
                             2️⃣ <b><a href="https://www.google.com/maps/search/?api=1&query=JR大阪站" class="sta" target="_blank">JR大阪站</a> ➔ <a href="https://www.google.com/maps/search/?api=1&query=京都站" class="sta" target="_blank">京都站</a> (車程 29 分鐘)：</b>搭乘 JR 新快速 (建議搭乘 08:00 或 08:15 班次)<br><br>
-                            🚗 <b>抵達京都站後：</b>前往租賃公司取車，沿著湖西道路自駕直達白鬚神社 (車程約 1 小時)<br>
+                            🚗 <b>抵達京都站後：</b>前往租賃公司取車，準備出發！<br>
                             💰 大阪至京都票價：地鐵 240 円 + JR 580 円 = 820 円 (租車費另計)
                         </div>
                     </details>
                 </li>
-                
-                <div class="route-box">
-                    <div>
-                        <strong>🗺️ Day 3 自駕 Google Maps 路線</strong>
-                        <small>京都站取車 → 琵琶湖沿線 → 景點 → 京都站</small>
-                    </div>
-                    <a class="route-btn" href="https://maps.app.goo.gl/MuUcug2nJaCNpMH5A" target="_blank" rel="noopener">開啟路線 ↗</a>
-                </div>
+                <li>10:00 景點：<a href="https://www.google.com/maps/search/?api=1&query=延暦寺" class="spot" target="_blank">比叡山 延曆寺</a>
+                    <span style="display:block;"><span class="tag tag-info">🚗 車程：從京都車站出發約 45 分鐘。探訪世界文化遺產！</span></span>
+                </li>
+                <li>11:30 景點：<a href="https://www.google.com/maps/search/?api=1&query=白鬚神社" class="spot" target="_blank">白鬚神社</a>
+                    <span style="display:block;"><span class="tag tag-info">🚗 車程：從延曆寺下山往北開約 45 分鐘，拍攝絕美湖中鳥居。</span></span>
+                </li>
             </ul>
         </div>
 
         <div class="time-slot">
             <span class="slot-title">午餐</span>
             <ul>
-                <li>餐廳：<a href="https://www.google.com/maps/search/?api=1&query=清林駅前店" class="rest" target="_blank">清林駅前店</a>
+                <li>12:30 抵達 <a href="https://www.google.com/maps/search/?api=1&query=琵琶湖+Terrace" class="spot" target="_blank">琵琶湖 Terrace</a> ➔ 搭乘纜車上山
                     <details>
                         <summary>點擊展開：自駕路線</summary>
-                        <div class="details-content">從白鬚神社開車過去非常近，免去騎腳踏車曝曬流汗的煩惱！</div>
+                        <div class="details-content">從白鬚神社往南開約 30 分鐘即可抵達纜車站專屬停車場。</div>
                     </details>
+                </li>
+                <li>13:00 餐廳：<a href="https://www.google.com/maps/search/?api=1&query=琵琶湖+Terrace" class="rest" target="_blank">琵琶湖 Terrace 觀景台餐廳</a>
+                    <span style="display:block;"><span class="tag tag-buy">⛰️ 備註：在山頂享受絕景午餐與下午茶。</span></span>
                 </li>
             </ul>
         </div>
 
         <div class="time-slot">
-            <span class="slot-title">下午 (自駕環湖)</span>
+            <span class="slot-title">下午</span>
             <ul>
-                <li>13:30 前往 <a href="https://www.google.com/maps/search/?api=1&query=琵琶湖+Terrace" class="spot" target="_blank">琵琶湖 Terrace</a> (觀景台)
+                <li>15:00 景點：<a href="https://www.google.com/maps/search/?api=1&query=浮御堂" class="spot" target="_blank">滿月寺 浮御堂</a>
+                    <span style="display:block;"><span class="tag tag-info">🚗 車程：從琵琶湖纜車站往南開約 15 分鐘，欣賞近江八景之一。</span></span>
+                </li>
+                <li>16:00 購物點：<a href="https://www.google.com/maps/search/?api=1&query=三井OUTLET+PARK+滋賀竜王" class="shop" target="_blank">三井 OUTLET PARK 滋賀龍王</a>
+                    <span style="display:block;"><span class="tag tag-buy">🛍️ 買爆！開車載戰利品最方便。</span></span>
                     <details>
                         <summary>點擊展開：自駕路線</summary>
-                        <div class="details-content">吃飽後直接開車南下前往「琵琶湖 Valley 纜車站」專屬停車場 (車程約 20-30 分鐘)。不用等 1 小時才 1 班的公車，時間超彈性！</div>
+                        <div class="details-content">從浮御堂跨越琵琶湖大橋往東南方向開，車程約 45 分鐘。可以逛到 18:30 左右準備回程。</div>
                     </details>
-                </li>
-                <li>行程：<a href="https://www.google.com/maps/search/?api=1&query=薪釜焼きのパン+るぅた" class="rest" target="_blank">るぅた 薪釜焼きのパン るぅた</a> (下午茶)</li>
-                <li>16:30 左右 ➔ 開車返回京都站還車
-                    <details>
-                        <summary>點擊展開：還車路線</summary>
-                        <div class="details-content">沿著國道一路向南開回<a href="https://www.google.com/maps/search/?api=1&query=京都站" class="sta" target="_blank">京都車站</a>周邊還車 (車程約 50-60 分鐘)。</div>
-                    </details>
-                </li>
-                <li>17:30～20:00 行程：<a href="https://www.google.com/maps/search/?api=1&query=京都塔" class="spot" target="_blank">京都塔</a> & <a href="https://www.google.com/maps/search/?api=1&query=teamLab+Biovortex+Kyoto" class="spot" target="_blank">teamLab Biovortex Kyoto</a>
-                    <span style="display:block;"><span class="tag tag-buy">📸 備註：還車後走路就能輕鬆到達這兩個點，逛完剛好在車站周邊吃晚餐！</span></span>
                 </li>
             </ul>
         </div>
@@ -412,14 +406,21 @@
         <div class="time-slot">
             <span class="slot-title">晚餐</span>
             <ul>
-                <li>京都車站周邊餐廳 (彈性安排)</li>
+                <li>19:00 餐廳：待定 (可於 Outlet 內用完餐，或回京都車站周邊吃)</li>
             </ul>
         </div>
 
         <div class="time-slot">
             <span class="slot-title">晚上</span>
             <ul>
-                <li>20:00 後 返回大阪難波
+                <li>20:00 前 返回京都站還車
+                    <span style="display:block;"><span class="tag tag-info">⚠️ 備註：請特別注意租車公司的打烊時間（通常為 20:00），請務必提早加滿油並歸還！</span></span>
+                    <details>
+                        <summary>點擊展開：還車路線</summary>
+                        <div class="details-content">從龍王 Outlet 開回<a href="https://www.google.com/maps/search/?api=1&query=京都站" class="sta" target="_blank">京都車站</a>周邊還車，車程約 50-60 分鐘。</div>
+                    </details>
+                </li>
+                <li>20:30 後 返回大阪難波
                     <details>
                         <summary>點擊展開：京都 ➔ 難波 交通方式</summary>
                         <div class="details-content">
@@ -435,17 +436,17 @@
     </div>
 
     <div class="card day-card" id="day4">
-        <h2>🗓️ Day 4 (8/22) 木津市場、難波深度 & 泉南煙火大會</h2>
+        <h2>🗓️ Day 4 (8/22) 難波深度購物 & 泉南煙火大會</h2>
         
         <div class="time-slot">
             <span class="slot-title">早餐</span>
             <ul>
                 <li>出發：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a></li>
-                <li>🍽️ <b>Plan A</b>：<a href="https://www.google.com/maps/search/?api=1&query=海鮮丼専門店+木津+魚市食堂" class="rest" target="_blank">海鮮丼専門店 木津 魚市食堂</a></li>
-                <li>🍽️ <b>Plan B</b>：<a href="https://www.google.com/maps/search/?api=1&query=木津壽司+まるよし" class="rest" target="_blank">木津壽司 Maruyoshi (まるよし)</a>
+                <li>選項 1：<a href="https://www.google.com/maps/search/?api=1&query=海鮮丼専門店+木津+魚市食堂" class="rest" target="_blank">海鮮丼専門店 木津 魚市食堂</a></li>
+                <li>選項 2：<a href="https://www.google.com/maps/search/?api=1&query=木津壽司+まるよし" class="rest" target="_blank">木津壽司 Maruyoshi (まるよし)</a>
                     <details>
                         <summary>點擊展開：步行路線</summary>
-                        <div class="details-content">從飯店步行至<a href="https://www.google.com/maps/search/?api=1&query=木津市場" class="shop" target="_blank">木津市場</a>，約 15 分鐘可抵達。</div>
+                        <div class="details-content">從飯店步行至<a href="https://www.google.com/maps/search/?api=1&query=木津市場" class="spot" target="_blank">木津市場</a>，約 15 分鐘可抵達。</div>
                     </details>
                 </li>
             </ul>
@@ -460,11 +461,14 @@
                         <div class="details-content">吃飽後從木津市場步行前往非常順路，約 5-8 分鐘即可抵達。</div>
                     </details>
                 </li>
-                <li>11:30 前往 <a href="https://www.google.com/maps/search/?api=1&query=千日前道具屋筋商店街" class="shop" target="_blank">千日前道具屋筋</a>
+                <li>10:30 購物點：<a href="https://www.google.com/maps/search/?api=1&query=WORKMAN+難波CITY" class="shop" target="_blank">WORKMAN女子 難波CITY店</a> ＆ <a href="https://www.google.com/maps/search/?api=1&query=mont-bell+難波CITY" class="shop" target="_blank">mont-bell 難波城市店</a>
+                    <span style="display:block;"><span class="tag tag-buy">🛍️ 購買物品：高CP戶外機能服飾、裝備</span></span>
+                </li>
+                <li>11:30 購物點：<a href="https://www.google.com/maps/search/?api=1&query=千日前道具屋筋商店街" class="shop" target="_blank">千日前道具屋筋</a>
                     <span style="display:block;"><span class="tag tag-buy">🛍️ 購買物品：買鐵鍋</span></span>
                     <details>
                         <summary>點擊展開：步行路線</summary>
-                        <div class="details-content">從八阪神社返回難波周邊，步行約 10-15 分鐘。</div>
+                        <div class="details-content">從難波CITY步行過來非常近，約 5-10 分鐘。</div>
                     </details>
                 </li>
             </ul>
@@ -473,14 +477,14 @@
         <div class="time-slot">
             <span class="slot-title">午餐</span>
             <ul>
-                <li>12:30 餐廳：<a href="https://www.google.com/maps/search/?api=1&query=Unashige+うな" class="rest" target="_blank">Unashige うな (鰻魚飯)</a></li>
+                <li>12:30 餐廳：待定</li>
             </ul>
         </div>
 
         <div class="time-slot">
             <span class="slot-title">下午</span>
             <ul>
-                <li>13:30～15:30 購物點：<a href="https://www.google.com/maps/search/?api=1&query=つるやゴルフ+本店" class="shop" target="_blank">つるやゴルフ 本店 (Golf Tsuruya Main Store)</a>
+                <li>14:00～15:30 購物點：<a href="https://www.google.com/maps/search/?api=1&query=つるやゴルフ+本店" class="shop" target="_blank">つるやゴルフ 本店 (Golf Tsuruya Main Store)</a>
                     <span style="display:block;"><span class="tag tag-buy">🛍️ 購買物品：高爾夫球具/用品</span></span>
                     <details>
                         <summary>點擊展開：前往本店交通方式</summary>
@@ -639,8 +643,8 @@
         <div class="time-slot">
             <span class="slot-title">早餐</span>
             <ul>
-                <li>09:00 起床與整理行李</li>
                 <li>出發：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a> (辦理退房)</li>
+                <li>09:00 起床與整理行李</li>
             </ul>
         </div>
         
@@ -672,7 +676,44 @@
         </div>
     </div>
 
-    <!-- 新增：拉麵百名店區塊 -->
+    <!-- 優惠券專區 -->
+    <div class="card" id="coupons">
+        <h2>🏷️ 購物必備優惠券專區</h2>
+        <p style="font-size:0.85em; color:var(--muted); margin-top:-15px; margin-bottom:20px;">
+            ※ 結帳前請先準備好畫面或票卡，讓你買越多省越多！<br>
+            💡 <b>圖片替換教學：</b>將你的優惠券圖片傳至 GitHub 同資料夾，並將下方代碼內的 <code>src="你的圖片檔名.jpg"</code> 替換掉即可顯示！若嫌麻煩，直接將圖片存在手機相簿結帳時出示也是最快的方法！
+        </p>
+
+        <div class="time-slot" style="border-left-color: #8e44ad;">
+            <span class="slot-title" style="color: #8e44ad; background: #f5eef8;">🏢 百貨公司神卡 (高島屋 / 0101丸井)</span>
+            <ul>
+                <li><b>難波高島屋 (Takashimaya)：</b><br>購物前記得先去服務台，憑護照領取「Hello Kitty 5% OFF 優惠卡」。除了免稅，結帳刷這張卡還能再打 95 折！</li>
+                <li><b>難波 0101 丸井百貨：</b><br>使用 VISA/Mastercard 信用卡結帳，部分檔期可享額外 5% 折扣，購物前請留意館內告示！</li>
+                
+                <!-- Github 圖片預留區 -->
+                <div class="coupon-img-placeholder">
+                    [此為高島屋/丸井 優惠券圖片預留區]<br>
+                    &lt;img src="你的百貨優惠券.jpg" style="width:100%; border-radius:8px;"&gt;
+                </div>
+            </ul>
+        </div>
+
+        <div class="time-slot" style="border-left-color: #e67e22;">
+            <span class="slot-title" style="color: #e67e22; background: #fdf2e9;">👓 眼鏡與藥妝 (JINS / Zoff / 唐吉訶德)</span>
+            <ul>
+                <li><b>JINS / Zoff 眼鏡：</b>可出示專屬 QR Code 或折價券享免稅＋額外折扣 (5~7% 不等，依當期活動為主)。</li>
+                <li><b>唐吉訶德 / 松本清：</b>結帳前掃描旅客專屬條碼，最高可享免稅 10% + 額外 5%~7% 優惠！</li>
+                
+                <!-- Github 圖片預留區 -->
+                <div class="coupon-img-placeholder">
+                    [此為眼鏡/藥妝 優惠券圖片預留區]<br>
+                    &lt;img src="你的藥妝優惠券.jpg" style="width:100%; border-radius:8px;"&gt;
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 拉麵百名店區塊 -->
     <div class="card" id="ramen">
         <h2>🍜 食べログ ラーメン百名店 (近三年入選・依地區分類)</h2>
         <p style="font-size:0.85em; color:var(--muted); margin-top:-15px; margin-bottom:20px;">※ 嚴選近三年獲得 Tabelog Ramen WEST/OSAKA 百名店，且位於行程周邊的頂級神店。</p>
