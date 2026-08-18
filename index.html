@@ -34,7 +34,7 @@
         /* ================= 超連結顏色分類 ================= */
         a.shop  { color: #6b8e23; border-bottom-color: rgba(107,142,35,.3); }   /* 抹茶色：購物景點 */
         a.spot  { color: #b58253; border-bottom-color: rgba(181,130,83,.3); }   /* 奶茶色：其他景點 */
-        a.rest  { color: #d49a00; border-bottom-color: rgba(212,154,0,.3); }    /* 黃金色：餐廳 */
+        a.rest  { color: #d49a00; border-bottom-color: rgba(212,154,0,.3); }    /* 黃金色：餐廳 (加深確保白底閱讀性) */
         a.sta   { color: #2980b9; border-bottom-color: rgba(41,128,185,.3); }   /* 藍色：車站 */
         a.hotel { color: #7d3c98; border-bottom-color: rgba(125,60,152,.3); }   /* 高貴紫：飯店 */
         a.link  { color: #8e44ad; border-bottom-color: rgba(142,68,173,.3); }   /* 一般連結紫 */
@@ -252,7 +252,7 @@
     </div>
 
     <div class="card day-card" id="day2">
-        <h2>🗓️ Day 2 (8/20) 大阪市區 & 梅田夜景</h2>
+        <h2>🗓️ Day 2 (8/20) 大阪市區 & 梅田旗艦大採購</h2>
         
         <div class="time-slot">
             <span class="slot-title">早餐</span>
@@ -307,16 +307,26 @@
         </div>
 
         <div class="time-slot">
-            <span class="slot-title">下午</span>
+            <span class="slot-title">下午 (梅田/茶屋町 獨立旗艦大樓巡禮)</span>
             <ul>
-                <li>12:30～17:00 <a href="https://www.google.com/maps/search/?api=1&query=梅田" class="shop" target="_blank">梅田商圈</a> 購物
-                    <details>
-                        <summary>點擊展開：步行路線</summary>
-                        <div class="details-content">吃飽後直接在梅田各大商場間步行逛街。</div>
-                    </details>
+                <li style="color:var(--muted); font-size:0.9em; margin-bottom:15px; border-left:none;">※ 放棄扣手續費的百貨公司，主攻這幾棟「梅田限定、免收百貨手續費」的超猛機能服飾/運動大樓！</li>
+                <li><a href="https://www.google.com/maps/search/?api=1&query=UNIQLO+OSAKA" class="shop" target="_blank">UNIQLO OSAKA</a> & <a href="https://www.google.com/maps/search/?api=1&query=GU+OSAKA" class="shop" target="_blank">GU</a>
+                    <span style="display:block;"><span class="tag tag-buy">👕 整棟的全球旗艦店！免收 1.55% 百貨手續費，最高CP值。</span></span>
                 </li>
-                <li>購物點：<a href="https://www.google.com/maps/search/?api=1&query=Alpen+OSAKA" class="shop" target="_blank">Alpen OSAKA</a>、<a href="https://www.google.com/maps/search/?api=1&query=asics+walking+梅田" class="shop" target="_blank">asics walking 梅田店</a>
-                    <span style="display:block;"><span class="tag tag-buy">🛍️ 購買物品：高爾夫球袋、ON跑鞋、HOKA跑鞋、asics鞋款</span></span>
+                <li><a href="https://www.google.com/maps/search/?api=1&query=Alpen+OSAKA" class="shop" target="_blank">Alpen OSAKA</a>
+                    <span style="display:block;"><span class="tag tag-buy">🛍️ 西日本最大級運動用品店！高爾夫球具、ON跑鞋必逛，免收手續費。</span></span>
+                </li>
+                <li><a href="https://www.google.com/maps/search/?api=1&query=DESCENTE+大阪" class="shop" target="_blank">DESCENTE (迪桑特) 大阪旗艦店</a>
+                    <span style="display:block;"><span class="tag tag-buy">🧥 高階運動機能服、水沢羽絨服。日本買價差極大，版型超好看！</span></span>
+                </li>
+                <li><a href="https://www.google.com/maps/search/?api=1&query=MIZUNO+OSAKA+CHAYAMACHI" class="shop" target="_blank">MIZUNO OSAKA CHAYAMACHI (美津濃)</a>
+                    <span style="display:block;"><span class="tag tag-buy">⚾ 全棟「7層樓」的全球旗艦店！棒球、高爾夫裝備超齊全，難波絕對找不到。</span></span>
+                </li>
+                <li><a href="https://www.google.com/maps/search/?api=1&query=Onitsuka+Tiger+大阪茶屋町" class="shop" target="_blank">Onitsuka Tiger (鬼塚虎) 茶屋町店</a>
+                    <span style="display:block;"><span class="tag tag-buy">👟 關西最大的獨立兩層樓路面店！款式最齊，限定款 NIPPON MADE 必看。</span></span>
+                </li>
+                <li><a href="https://www.google.com/maps/search/?api=1&query=ARC'TERYX+大阪" class="shop" target="_blank">ARC'TERYX (始祖鳥) 大阪旗艦店</a>
+                    <span style="display:block;"><span class="tag tag-buy">🎒 機能服飾天花板！店面超大，日幣匯率換算下來比台灣省超級多！</span></span>
                 </li>
             </ul>
         </div>
@@ -337,6 +347,9 @@
         <div class="time-slot">
             <span class="slot-title">晚上</span>
             <ul>
+                <li>19:00 點心/隔日早餐：<a href="https://www.google.com/maps/search/?api=1&query=BOULANGERIE+BURDIGALA+大阪店" class="rest" target="_blank">BOULANGERIE BURDIGALA 大阪店</a>
+                    <span style="display:block;"><span class="tag tag-buy">🥐 備註：位於梅田 Herbis Plaza B2F，上觀景台前順路買好神級麵包！</span></span>
+                </li>
                 <li>19:30～21:00 前往 <a href="https://www.google.com/maps/search/?api=1&query=梅田空中庭園" class="spot" target="_blank">梅田空中庭園</a> 看百萬夜景
                     <details>
                         <summary>點擊展開：行程調整說明</summary>
@@ -669,8 +682,8 @@
         <div class="time-slot">
             <span class="slot-title">早餐</span>
             <ul>
-                <li>09:00 起床與整理行李</li>
                 <li>出發：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a> (辦理退房)</li>
+                <li>09:00 起床與整理行李</li>
             </ul>
         </div>
         
