@@ -34,7 +34,7 @@
         /* ================= 超連結顏色分類 ================= */
         a.shop  { color: #6b8e23; border-bottom-color: rgba(107,142,35,.3); }   /* 抹茶色：購物景點 */
         a.spot  { color: #b58253; border-bottom-color: rgba(181,130,83,.3); }   /* 奶茶色：其他景點 */
-        a.rest  { color: #d49a00; border-bottom-color: rgba(212,154,0,.3); }    /* 黃金色：餐廳 */
+        a.rest  { color: #d49a00; border-bottom-color: rgba(212,154,0,.3); }    /* 黃金色：餐廳 (加深確保白底閱讀性) */
         a.sta   { color: #2980b9; border-bottom-color: rgba(41,128,185,.3); }   /* 藍色：車站 */
         a.hotel { color: #7d3c98; border-bottom-color: rgba(125,60,152,.3); }   /* 高貴紫：飯店 */
         a.link  { color: #8e44ad; border-bottom-color: rgba(142,68,173,.3); }   /* 一般連結紫 */
@@ -172,41 +172,711 @@
         </ul>
     </div>
 
-    <!-- 省略 Day 1 內容以節省長度，請直接貼上即可 -->
-    
+    <!-- =============== DAY 1 =============== -->
+    <div class="card day-card" id="day1">
+        <h2>🗓️ Day 1 (8/19) 抵達大阪 & 臨空城血拚</h2>
+        
+        <div class="time-slot">
+            <span class="slot-title">下午 (依航班抵達狀況 2 選 1)</span>
+            <ul>
+                <li>14:50 抵達 <a href="https://www.google.com/maps/search/?api=1&query=關西國際機場" class="sta" target="_blank">關西機場</a></li>
+                <hr>
+                <li>✨ <b>【Plan A】準時抵達 (前往臨空城)</b></li>
+                <li>15:40～17:30 購物點：<a href="https://www.google.com/maps/search/?api=1&query=臨空城購物中心" class="shop" target="_blank">臨空城購物中心</a>
+                    <details>
+                        <summary>點擊展開：機場 ➔ 臨空城 交通時刻</summary>
+                        <div class="details-content">
+                            車程皆約 6 分鐘，票價皆約 370 円。<br><br>
+                            🟠 <b>南海電鐵 (空港急行)：</b> 15:44、15:56、16:14<br>
+                            🔵 <b>JR西日本 (關空快速)：</b> 15:33、15:48、16:03、16:18
+                        </div>
+                    </details>
+                </li>
+                <li>18:00～19:00 <a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a> 飯店 Check-in
+                    <details>
+                        <summary>點擊展開：臨空城 ➔ 飯店 交通時刻</summary>
+                        <div class="details-content">
+                            📍 <b>【<a href="https://www.google.com/maps/search/?api=1&query=臨空城站" class="sta" target="_blank">臨空城站</a>】(搭南海急行)：</b> 17:56、18:14、18:26、18:44<br>
+                            ⏳ <i>(車程約 36 分鐘 ➔ 抵達天下茶屋站，站內步行轉乘約 5 分鐘)</i><br><br>
+                            📍 <b>【<a href="https://www.google.com/maps/search/?api=1&query=天下茶屋站" class="sta" target="_blank">天下茶屋站</a>】(轉地鐵堺筋線)：</b> 18:36、18:55、19:07、19:25<br>
+                            ⏳ <i>(車程約 7 分鐘 ➔ 抵達長堀橋站，出站步行 5 分鐘至飯店)</i><br>
+                            💰 票價：南海 780 円 + 地鐵 240 円 = 約 1,020 円
+                        </div>
+                    </details>
+                </li>
+                <hr>
+                <li>✨ <b>【Plan B】班機延誤 (17:00後出關，直奔飯店)</b></li>
+                <li>17:00～18:00 直接前往飯店 Check-in
+                    <details>
+                        <summary>點擊展開：機場 ➔ 飯店 最速直達路線</summary>
+                        <div class="details-content">
+                            📍 <b>【<a href="https://www.google.com/maps/search/?api=1&query=關西機場站" class="sta" target="_blank">關西機場站</a>】(搭南海空港急行)：</b> 17:09、17:26、17:39、17:54<br>
+                            ⏳ <i>(車程約 40 分鐘 ➔ 抵達天下茶屋站，站內步行轉乘約 5 分鐘)</i><br><br>
+                            📍 <b>【<a href="https://www.google.com/maps/search/?api=1&query=天下茶屋站" class="sta" target="_blank">天下茶屋站</a>】(轉地鐵堺筋線)：</b> 班次密集，約 4-6 分鐘一班<br>
+                            ⏳ <i>(車程約 7 分鐘 ➔ 抵達<a href="https://www.google.com/maps/search/?api=1&query=長堀橋站" class="sta" target="_blank">長堀橋站</a>，出站步行 5 分鐘至飯店)</i><br><br>
+                            💡 <b>若想確保有座位：</b>可劃位搭乘特急 Rapi:t (17:05、17:35發車)，需加購特急券 520 円。<br>
+                            💰 一般票價：南海 970 円 + 地鐵 240 円 = 約 1,210 円
+                        </div>
+                    </details>
+                </li>
+                <hr>
+                <li>購物點：<a href="https://www.google.com/maps/search/?api=1&query=JINS+難波" class="shop" target="_blank">JINS難波</a>
+                    <span style="display:block;"><span class="tag tag-buy">🛍️ 購買物品：配眼鏡</span></span>
+                    <details>
+                        <summary>點擊展開：難波站交通方式</summary>
+                        <div class="details-content">
+                            從 <a href="https://www.google.com/maps/search/?api=1&query=近鐵日本橋站" class="sta" target="_blank">近鐵日本橋站</a> 搭乘一站至 <a href="https://www.google.com/maps/search/?api=1&query=大阪難波站" class="sta" target="_blank">大阪難波站</a> (車程約 2 分鐘) 💰 票價：約 180 円
+                        </div>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">晚餐</span>
+            <ul>
+                <li>餐廳：<a href="https://www.google.com/maps/search/?api=1&query=法善寺+三平" class="rest" target="_blank">法善寺 三平</a> (大阪燒)</li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">晚上</span>
+            <ul>
+                <li>20:00～20:30 行程：<a href="https://www.google.com/maps/search/?api=1&query=法善寺" class="spot" target="_blank">法善寺</a></li>
+                <li>20:30～22:00 行程：<a href="https://www.google.com/maps/search/?api=1&query=道頓堀商店街" class="shop" target="_blank">道頓堀商店街</a> 逛街</li>
+                <li>(可考慮) 澡堂：<a href="https://www.google.com/maps/search/?api=1&query=湯源郷+太平のゆ+なんば店" class="spot" target="_blank">湯源郷 太平のゆ なんば店</a>
+                    <span style="display:block;"><span class="tag tag-buy">♨️ 備註：費用約 850 円，營業至 25:00 打烊</span></span>
+                </li>
+                <li>返回：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- =============== DAY 2 =============== -->
     <div class="card day-card" id="day2">
         <h2>🗓️ Day 2 (8/20) 大阪市區 & 梅田旗艦大採購</h2>
+        
         <div class="time-slot">
             <span class="slot-title">早餐</span>
             <ul>
                 <li>出發：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a></li>
-                <li>餐廳：<a href="https://www.google.com/maps/search/?api=1&query=丸福珈琲店+千日前本店" class="rest" target="_blank">丸福珈琲店 千日前本店</a></li>
+                <li>餐廳：<a href="https://www.google.com/maps/search/?api=1&query=丸福珈琲店+千日前本店" class="rest" target="_blank">丸福珈琲店 千日前本店</a>
+                    <details>
+                        <summary>點擊展開：步行路線</summary>
+                        <div class="details-content">從飯店步行前往，約 5-8 分鐘即可抵達。</div>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">早上</span>
+            <ul>
+                <li>09:30～10:00 前往 <a href="https://www.google.com/maps/search/?api=1&query=大阪天滿宮" class="spot" target="_blank">大阪天滿宮</a> 參拜
+                    <details>
+                        <summary>點擊展開：免轉車交通方式</summary>
+                        <div class="details-content">
+                            從咖啡店步行 3 分鐘至 <a href="https://www.google.com/maps/search/?api=1&query=日本橋站" class="sta" target="_blank">日本橋站</a>，搭乘 <b>地鐵堺筋線</b> 直達 <a href="https://www.google.com/maps/search/?api=1&query=南森町站" class="sta" target="_blank">南森町站</a> (免轉車，車程約 5 分鐘)。出站步行 3 分鐘即達天滿宮！💰 票價：240 円
+                        </div>
+                    </details>
+                </li>
+                <li>10:15～10:40 前往 <a href="https://www.google.com/maps/search/?api=1&query=露天神社+(お初天神)" class="spot" target="_blank">梅田露天神社 (お初天神)</a>
+                    <details>
+                        <summary>點擊展開：轉乘交通方式</summary>
+                        <div class="details-content">
+                            從天滿宮旁的 <a href="https://www.google.com/maps/search/?api=1&query=南森町站" class="sta" target="_blank">南森町站</a> 搭乘地鐵谷町線至 <a href="https://www.google.com/maps/search/?api=1&query=東梅田站" class="sta" target="_blank">東梅田站</a> (僅1站，車程約 3 分鐘)，出站步行約 5 分鐘即可抵達 💰 票價：約 190 円
+                        </div>
+                    </details>
+                </li>
+                <li>10:50 抵達梅田 KITTE大阪 準備排隊午餐
+                    <details>
+                        <summary>點擊展開：步行路線</summary>
+                        <div class="details-content">
+                            從露天神社步行約 10 分鐘即可抵達 KITTE大阪 (JR大阪站旁)。
+                        </div>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">午餐</span>
+            <ul>
+                <li>10:50 現場排隊：<a href="https://www.google.com/maps/search/?api=1&query=すき焼+しゃぶしゃぶつかだ+KITTE大阪店" class="rest" target="_blank">すき焼 しゃぶしゃぶつかだ KITTE大阪店</a>
+                    <span style="display:block;"><span class="tag tag-info">🍲 備註：餐廳 11:00 開門！因無法訂位，建議 10:50 準時抵達現場排第一批入場最完美！</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">下午 (梅田商圈戰略購物)</span>
+            <ul>
+                <li>📍 <b>必逛百貨地標 (集中於 JR大阪站 旁)：</b>
+                    <ul>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=LUCUA+Osaka" class="shop" target="_blank">LUCUA Osaka</a> & <a href="https://www.google.com/maps/search/?api=1&query=LUCUA+1100" class="shop" target="_blank">LUCUA 1100</a></li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=GRAND+FRONT+大阪" class="shop" target="_blank">GRAND FRONT 大阪</a></li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=LINKS+UMEDA" class="shop" target="_blank">LINKS UMEDA</a></li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=HEP+FIVE" class="spot" target="_blank">HEP FIVE (紅色摩天輪)</a></li>
+                    </ul>
+                </li>
+                <br>
+                <li>📍 <b>茶屋町區域 (獨立旗艦大樓、免收百貨手續費！)：</b>
+                    <ul>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=UNIQLO+OSAKA" class="shop" target="_blank">UNIQLO OSAKA</a> & <a href="https://www.google.com/maps/search/?api=1&query=GU+OSAKA" class="shop" target="_blank">GU</a>
+                            <span style="display:block;"><span class="tag tag-buy">👕 備註：整棟的全球旗艦店！退稅免收手續費，比百貨內的分店划算。</span></span>
+                        </li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=Alpen+OSAKA" class="shop" target="_blank">Alpen OSAKA</a>
+                            <span style="display:block;"><span class="tag tag-buy">🛍️ 備註：西日本最大級運動用品店，買高爾夫球具、ON跑鞋必逛！獨立退稅免手續費。</span></span>
+                        </li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=DESCENTE+大阪" class="shop" target="_blank">DESCENTE (迪桑特) 大阪旗艦店</a>
+                            <span style="display:block;"><span class="tag tag-buy">🧥 備註：高階運動機能服、水沢羽絨服。日本買價差極大，版型超好看！</span></span>
+                        </li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=MIZUNO+OSAKA+CHAYAMACHI" class="shop" target="_blank">MIZUNO OSAKA CHAYAMACHI (美津濃)</a>
+                            <span style="display:block;"><span class="tag tag-buy">⚾ 備註：全棟「7層樓」全球旗艦店！棒球、高爾夫裝備超齊全。</span></span>
+                        </li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=Onitsuka+Tiger+大阪茶屋町" class="shop" target="_blank">Onitsuka Tiger (鬼塚虎) 茶屋町店</a>
+                            <span style="display:block;"><span class="tag tag-buy">👟 備註：關西最大的獨立兩層樓路面店！限定款 NIPPON MADE 必看。</span></span>
+                        </li>
+                        <li><a href="https://www.google.com/maps/search/?api=1&query=ARC'TERYX+大阪" class="shop" target="_blank">ARC'TERYX (始祖鳥) 大阪旗艦店</a>
+                            <span style="display:block;"><span class="tag tag-buy">🎒 備註：機能服飾神牌！這裡貨量大，用日幣匯率買下來比台灣省超級多。</span></span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">晚餐</span>
+            <ul>
+                <li>17:30 🍖 <b>確定預約</b>：<a href="https://www.google.com/maps/search/?api=1&query=炭焼+うな富士+大阪梅田店" class="rest" target="_blank">炭焼 うな富士 (Sumiyaki Unafuji) 大阪梅田店</a>
+                    <span style="display:block;"><span class="tag tag-ticket">📌 預約資訊：3人 / 8月20日 (週四) 下午 5:30 (桌席)</span></span>
+                    <details>
+                        <summary>點擊展開：步行路線</summary>
+                        <div class="details-content">餐廳位於「GRAND GREEN OSAKA 南館 3F」，逛完街走過去吃超高檔鰻魚飯剛剛好！</div>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">晚上</span>
+            <ul>
+                <li>19:00 點心/隔日早餐：<a href="https://www.google.com/maps/search/?api=1&query=BOULANGERIE+BURDIGALA+大阪店" class="rest" target="_blank">BOULANGERIE BURDIGALA 大阪店</a>
+                    <span style="display:block;"><span class="tag tag-buy">🥐 備註：位於梅田 Herbis Plaza B2F，上觀景台前順路買好神級麵包！</span></span>
+                </li>
+                <li>19:30～21:00 前往 <a href="https://www.google.com/maps/search/?api=1&query=梅田空中庭園" class="spot" target="_blank">梅田空中庭園</a> 看百萬夜景
+                    <details>
+                        <summary>點擊展開：行程調整說明</summary>
+                        <div class="details-content">因為晚餐吃得早，19:30 吃飽後天色已經全黑，此時上去看夜景才是最漂亮、最浪漫的時機！💰 票價：0 円 (門票另計)</div>
+                    </details>
+                </li>
+                <li>21:00 結束行程返回飯店
+                    <details>
+                        <summary>點擊展開：返回飯店 交通方式</summary>
+                        <div class="details-content">從 <a href="https://www.google.com/maps/search/?api=1&query=梅田站" class="sta" target="_blank">梅田站</a> 搭乘地鐵御堂筋線至 <a href="https://www.google.com/maps/search/?api=1&query=難波站" class="sta" target="_blank">難波站</a> (車程約 9 分鐘) 💰 票價：240 円</div>
+                    </details>
+                </li>
+                <li>返回：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- =============== DAY 3 =============== -->
+    <div class="card day-card" id="day3">
+        <h2>🗓️ Day 3 (8/21) 琵琶湖自駕、神社會車一日遊</h2>
+        
+        <div class="time-slot">
+            <span class="slot-title">早餐</span>
+            <ul>
+                <li>出發：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a></li>
+                <li>餐點：享用前一晚買好的 BURDIGALA 麵包</li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">早上 (出發與租車)</span>
+            <ul>
+                <li>09:00 抵達京都站 ➔ 辦理取車 ➔ 開始自駕環湖之旅
+                    <span style="display:block;"><span class="tag tag-info">⚠️ 必備文件：務必攜帶「台灣駕照正本」與「日文譯本」！</span></span>
+                    <details>
+                        <summary>點擊展開：前往京都轉乘與租車細節</summary>
+                        <div class="details-content">
+                            1️⃣ <b><a href="https://www.google.com/maps/search/?api=1&query=難波站" class="sta" target="_blank">難波站</a> ➔ 梅田/<a href="https://www.google.com/maps/search/?api=1&query=JR大阪站" class="sta" target="_blank">JR大阪站</a> (車程 9 分鐘)：</b>搭乘地鐵御堂筋線<br>
+                            2️⃣ <b><a href="https://www.google.com/maps/search/?api=1&query=JR大阪站" class="sta" target="_blank">JR大阪站</a> ➔ <a href="https://www.google.com/maps/search/?api=1&query=京都站" class="sta" target="_blank">京都站</a> (車程 29 分鐘)：</b>搭乘 JR 新快速 (建議搭乘 08:00 或 08:15 班次)<br><br>
+                            🚗 <b>抵達京都站後：</b>前往租賃公司取車，準備出發！<br>
+                            💰 大阪至京都票價：地鐵 240 円 + JR 580 円 = 820 円 (租車費另計)
+                        </div>
+                    </details>
+                </li>
+                
+                <div class="route-box">
+                    <div>
+                        <strong>🗺️ Day 3 自駕 Google Maps 路線</strong>
+                        <small>京都站取車 → 琵琶湖沿線 → 景點 → 京都站</small>
+                    </div>
+                    <a class="route-btn" href="https://maps.app.goo.gl/MuUcug2nJaCNpMH5A" target="_blank" rel="noopener">開啟路線 ↗</a>
+                </div>
+                
+                <li>10:00 景點：<a href="https://www.google.com/maps/search/?api=1&query=延暦寺" class="spot" target="_blank">比叡山 延曆寺</a>
+                    <span style="display:block;"><span class="tag tag-info">🚗 車程：從京都車站出發約 45 分鐘。探訪世界文化遺產！</span></span>
+                </li>
+                <li>11:30 景點：<a href="https://www.google.com/maps/search/?api=1&query=白鬚神社" class="spot" target="_blank">白鬚神社</a>
+                    <span style="display:block;"><span class="tag tag-info">🚗 車程：從延曆寺下山往北開約 45 分鐘，拍攝絕美湖中鳥居。</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">午餐</span>
+            <ul>
+                <li>12:30 抵達 <a href="https://www.google.com/maps/search/?api=1&query=琵琶湖+Terrace" class="spot" target="_blank">琵琶湖 Terrace</a> ➔ 搭乘纜車上山
+                    <details>
+                        <summary>點擊展開：自駕路線</summary>
+                        <div class="details-content">從白鬚神社往南開約 30 分鐘即可抵達纜車站專屬停車場。</div>
+                    </details>
+                </li>
+                <li>13:00 餐廳：<a href="https://www.google.com/maps/search/?api=1&query=琵琶湖+Terrace" class="rest" target="_blank">琵琶湖 Terrace 觀景台餐廳</a>
+                    <span style="display:block;"><span class="tag tag-buy">⛰️ 備註：在山頂享受絕景午餐與下午茶。</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">下午</span>
+            <ul>
+                <li>15:00 景點：<a href="https://www.google.com/maps/search/?api=1&query=浮御堂" class="spot" target="_blank">滿月寺 浮御堂</a>
+                    <span style="display:block;"><span class="tag tag-info">🚗 車程：從琵琶湖纜車站往南開約 15 分鐘，欣賞近江八景之一。</span></span>
+                </li>
+                <li>16:00 購物點：<a href="https://www.google.com/maps/search/?api=1&query=三井OUTLET+PARK+滋賀竜王" class="shop" target="_blank">三井 OUTLET PARK 滋賀龍王</a>
+                    <span style="display:block;"><span class="tag tag-buy">🛍️ 買爆！開車載戰利品最方便。</span></span>
+                    <details>
+                        <summary>點擊展開：自駕路線</summary>
+                        <div class="details-content">從浮御堂跨越琵琶湖大橋往東南方向開，車程約 45 分鐘。可以逛到 18:30 左右準備回程。</div>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">晚餐</span>
+            <ul>
+                <li>19:00 餐廳：待定 (可於 Outlet 內用完餐，或回京都車站周邊吃)</li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">晚上</span>
+            <ul>
+                <li>20:00 前 返回京都站還車
+                    <span style="display:block;"><span class="tag tag-info">⚠️ 備註：請特別注意租車公司的打烊時間（通常為 20:00），請務必提早加滿油並歸還！</span></span>
+                    <details>
+                        <summary>點擊展開：還車路線</summary>
+                        <div class="details-content">從龍王 Outlet 開回<a href="https://www.google.com/maps/search/?api=1&query=京都站" class="sta" target="_blank">京都車站</a>周邊還車，車程約 50-60 分鐘。</div>
+                    </details>
+                </li>
+                <li>20:30 後 返回大阪難波
+                    <details>
+                        <summary>點擊展開：京都 ➔ 難波 交通方式</summary>
+                        <div class="details-content">
+                            1️⃣ <b>【<a href="https://www.google.com/maps/search/?api=1&query=京都站" class="sta" target="_blank">京都站</a>】搭乘 JR：</b> 尋找 <b>JR京都線</b> 月台，搭乘<b>「新快速」</b>列車。只要 29 分鐘直達【<a href="https://www.google.com/maps/search/?api=1&query=JR大阪站" class="sta" target="_blank">JR 大阪站</a>】。<br>
+                            2️⃣ <b>【JR 大阪站】轉乘地鐵：</b> 抵達大阪後出站，走到地下鐵【<a href="https://www.google.com/maps/search/?api=1&query=梅田站" class="sta" target="_blank">梅田站</a>】，搭 <b>地鐵御堂筋線 (紅線)</b>，約 9 分鐘抵達【<a href="https://www.google.com/maps/search/?api=1&query=難波站" class="sta" target="_blank">難波站</a>】。<br>
+                            💰 總票價：JR 580 円 + 地鐵 240 円 = 約 820 円
+                        </div>
+                    </details>
+                </li>
+                <li>返回：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- =============== DAY 4 =============== -->
+    <div class="card day-card" id="day4">
+        <h2>🗓️ Day 4 (8/22) 難波深度購物 & 泉南煙火大會</h2>
+        
+        <div class="time-slot">
+            <span class="slot-title">早餐</span>
+            <ul>
+                <li>出發：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a></li>
+                <li>🍽️ <b>Plan A</b>：<a href="https://www.google.com/maps/search/?api=1&query=海鮮丼専門店+木津+魚市食堂" class="rest" target="_blank">海鮮丼専門店 木津 魚市食堂</a></li>
+                <li>🍽️ <b>Plan B</b>：<a href="https://www.google.com/maps/search/?api=1&query=木津壽司+まるよし" class="rest" target="_blank">木津壽司 Maruyoshi (まるよし)</a>
+                    <details>
+                        <summary>點擊展開：步行路線</summary>
+                        <div class="details-content">從飯店步行至<a href="https://www.google.com/maps/search/?api=1&query=木津市場" class="spot" target="_blank">木津市場</a>，約 15 分鐘可抵達。</div>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">早上</span>
+            <ul>
+                <li>09:30 前往 <a href="https://www.google.com/maps/search/?api=1&query=難波八阪神社" class="spot" target="_blank">難波八阪神社</a>
+                    <details>
+                        <summary>點擊展開：步行路線</summary>
+                        <div class="details-content">吃飽後從木津市場步行前往非常順路，約 5-8 分鐘即可抵達。</div>
+                    </details>
+                </li>
+                <li>10:30 購物點：<a href="https://www.google.com/maps/search/?api=1&query=WORKMAN+難波CITY" class="shop" target="_blank">WORKMAN女子 難波CITY店</a> ＆ <a href="https://www.google.com/maps/search/?api=1&query=mont-bell+難波CITY" class="shop" target="_blank">mont-bell 難波城市店</a>
+                    <span style="display:block;"><span class="tag tag-buy">🛍️ 購買物品：高CP戶外機能服飾、裝備</span></span>
+                </li>
+                <li>11:30 購物點：<a href="https://www.google.com/maps/search/?api=1&query=千日前道具屋筋商店街" class="shop" target="_blank">千日前道具屋筋</a>
+                    <span style="display:block;"><span class="tag tag-buy">🛍️ 購買物品：買鐵鍋</span></span>
+                    <details>
+                        <summary>點擊展開：步行路線</summary>
+                        <div class="details-content">從難波CITY步行過來非常近，約 5-10 分鐘。</div>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">午餐</span>
+            <ul>
+                <li>12:30 餐廳：待定</li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">下午</span>
+            <ul>
+                <li>14:00～15:30 購物點：<a href="https://www.google.com/maps/search/?api=1&query=つるやゴルフ+本店" class="shop" target="_blank">つるやゴルフ 本店 (Golf Tsuruya Main Store)</a>
+                    <span style="display:block;"><span class="tag tag-buy">🛍️ 購買物品：高爾夫球具/用品</span></span>
+                    <details>
+                        <summary>點擊展開：前往本店交通方式</summary>
+                        <div class="details-content">從 <a href="https://www.google.com/maps/search/?api=1&query=難波站" class="sta" target="_blank">難波站</a> 搭乘 <b>地鐵御堂筋線</b> 至 <a href="https://www.google.com/maps/search/?api=1&query=本町站" class="sta" target="_blank">本町站</a> (車程 4 分鐘)，出站即達 💰 票價：180 円。</div>
+                    </details>
+                </li>
+                <li>16:00～20:00 前往 <a href="https://www.google.com/maps/search/?api=1&query=泉南臨空公園" class="spot" target="_blank">泉州夢花火 (泉南煙火大會)</a>
+                    <span style="display:block;"><span class="tag tag-info">💡 <a href="https://senshuhanabi.com/" class="link" target="_blank">點此進入官方網站</a> 查詢最新天氣公告、延期狀況與 Live 音樂展演排程。</span></span>
+                    <details>
+                        <summary>點擊展開：本町 ➔ 煙火會場交通</summary>
+                        <div class="details-content">從本町搭地鐵回 <a href="https://www.google.com/maps/search/?api=1&query=難波站" class="sta" target="_blank">難波站</a> (4分鐘)，轉搭南海本線至 <a href="https://www.google.com/maps/search/?api=1&query=樽井站" class="sta" target="_blank">樽井站</a> (急行車程約 45 分鐘)，下車步行約 10 分鐘到海邊會場 💰 票價：地鐵180円 + 南海780円 = 約 960 円</div>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">晚餐</span>
+            <ul>
+                <li>煙火大會會場逛攤販</li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">晚上</span>
+            <ul>
+                <li>23:53 前搭末班車返回難波
+                    <details>
+                        <summary>點擊展開：會場 ➔ 難波 交通方式</summary>
+                        <div class="details-content"><a href="https://www.google.com/maps/search/?api=1&query=樽井站" class="sta" target="_blank">樽井站</a> 搭南海本線直達 <a href="https://www.google.com/maps/search/?api=1&query=難波站" class="sta" target="_blank">難波站</a> (車程約 45 分鐘) 💰 票價：約 780 円</div>
+                    </details>
+                </li>
+                <li>返回：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- =============== DAY 5 =============== -->
+    <div class="card day-card" id="day5">
+        <h2>🗓️ Day 5 (8/23) 嵐山、二條城與烏丸御池 & 梅田燒肉</h2>
+        
+        <div class="time-slot">
+            <span class="slot-title">早餐</span>
+            <ul>
+                <li>出發：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a></li>
+                <li>(建議於超商或飯店簡單解決，需提早出發)</li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">早上</span>
+            <ul>
+                <li>09:50 前 抵達 <a href="https://www.google.com/maps/search/?api=1&query=馬堀站" class="sta" target="_blank">馬堀站</a> 並步行至龜岡站
+                    <details>
+                        <summary>點擊展開：難波 ➔ 龜岡 轉乘時刻表</summary>
+                        <div class="details-content">
+                            1️⃣ <b><a href="https://www.google.com/maps/search/?api=1&query=難波站" class="sta" target="_blank">難波站</a> ➔ 梅田/<a href="https://www.google.com/maps/search/?api=1&query=JR大阪站" class="sta" target="_blank">JR大阪站</a> (車程 9 分鐘)</b><br>
+                            🔴 <b>大阪地下鐵 (御堂筋線)：</b> 班次極密集，約 3-4 分鐘一班 (建議 07:40 - 07:50 間搭乘)<br><br>
+                            2️⃣ <b><a href="https://www.google.com/maps/search/?api=1&query=JR大阪站" class="sta" target="_blank">JR大阪站</a> ➔ <a href="https://www.google.com/maps/search/?api=1&query=京都站" class="sta" target="_blank">京都站</a> (車程 29 分鐘)</b><br>
+                            🔵 <b>JR西日本 (京都線・新快速)：</b> 08:00、08:15、08:30 (🌟推薦)、08:45、09:00<br><br>
+                            3️⃣ <b><a href="https://www.google.com/maps/search/?api=1&query=京都站" class="sta" target="_blank">京都站</a> ➔ <a href="https://www.google.com/maps/search/?api=1&query=馬堀站" class="sta" target="_blank">馬堀站</a> (車程約 25-30 分鐘)</b><br>
+                            🔵 <b>JR西日本 (嵯峨野線・普通/快速)：</b> 08:38、08:53、09:12 (🌟推薦)、09:32、09:50<br><br>
+                            💰 票價：地鐵 240 円 + JR 1,170 円 = 約 1,410 円<br>
+                            ※ 下車後步行約 10 分鐘至<a href="https://www.google.com/maps/search/?api=1&query=小火車龜岡站" class="sta" target="_blank">小火車龜岡站</a>。
+                        </div>
+                    </details>
+                </li>
+                <li>10:00 抵達 <a href="https://www.google.com/maps/search/?api=1&query=小火車龜岡站" class="sta" target="_blank">小火車龜岡站</a> 等候上車</li>
+                <li>10:30～10:50 搭乘 <a href="https://www.google.com/maps/search/?api=1&query=嵯峨野觀光鐵道" class="spot" target="_blank">嵯峨野小火車</a> (龜岡發車 ➔ 嵐山下車)
+                    <span style="display:block;"><span class="tag tag-ticket">🎫 已訂票資訊 (8/23)<br>列車：嵯峨野4号<br>時間：10:30 トロッコ亀岡 出發 ➔ 10:50 トロッコ嵐山 抵達<br>座位：2号車-7A、2号車-7C、2号車-7D (3人)</span></span>
+                    <details>
+                        <summary>點擊展開：乘車提醒</summary>
+                        <div class="details-content">當天請出示乘車 QR Code 驗票使用。車程約 20 分鐘。</div>
+                    </details>
+                </li>
+                <li>11:00～13:00 漫步 <a href="https://www.google.com/maps/search/?api=1&query=嵐山竹林小徑" class="spot" target="_blank">嵐山竹林小徑</a> 往 <a href="https://www.google.com/maps/search/?api=1&query=渡月橋" class="spot" target="_blank">渡月橋</a> 方向
+                    <span style="display:block;"><span class="tag tag-buy">🍡 散步點心：<a href="https://www.google.com/maps/search/?api=1&query=中村屋+総本店" class="rest" target="_blank">中村屋 總本店</a> (炸肉餅)、<a href="https://www.google.com/maps/search/?api=1&query=新八茶屋" class="rest" target="_blank">新八茶屋</a> (冰淇淋)</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">午餐</span>
+            <ul>
+                <li>13:00 嵐山周邊或渡月橋畔午餐</li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">下午 (市區巡禮)</span>
+            <ul>
+                <li>13:40 前往二條區域 (<a href="https://www.google.com/maps/search/?api=1&query=神泉苑" class="spot" target="_blank">神泉苑</a>、<a href="https://www.google.com/maps/search/?api=1&query=二条城" class="spot" target="_blank">二條城</a>)
+                    <details>
+                        <summary>點擊展開：嵐山 ➔ 二條 交通方式</summary>
+                        <div class="details-content">
+                            從 <a href="https://www.google.com/maps/search/?api=1&query=JR嵯峨嵐山站" class="sta" target="_blank">JR嵯峨嵐山站</a> 搭乘 <b>JR嵯峨野線</b>，直達 <a href="https://www.google.com/maps/search/?api=1&query=JR二條站" class="sta" target="_blank">JR二條站</a>。<br>⏳ <i>車程只要 7 分鐘！</i> 💰 票價：240 円
+                        </div>
+                    </details>
+                </li>
+                <li>14:00～15:30 行程：先順路至 <a href="https://www.google.com/maps/search/?api=1&query=神泉苑" class="spot" target="_blank">神泉苑</a>，接著步行參觀 <a href="https://www.google.com/maps/search/?api=1&query=二条城" class="spot" target="_blank">二條城</a>
+                    <details>
+                        <summary>點擊展開：步行路線</summary>
+                        <div class="details-content">從 <a href="https://www.google.com/maps/search/?api=1&query=JR二條站" class="sta" target="_blank">JR二條站</a> 步行至神泉苑約 5 分鐘；神泉苑步行至二條城門口約 2 分鐘。</div>
+                    </details>
+                </li>
+                <li>15:40～16:30 行程：<a href="https://www.google.com/maps/search/?api=1&query=御金神社" class="spot" target="_blank">御金神社</a> 洗錢祈福
+                    <details>
+                        <summary>點擊展開：二條城 ➔ 御金神社 交通方式</summary>
+                        <div class="details-content">從二條城門口的 <a href="https://www.google.com/maps/search/?api=1&query=二条城前站" class="sta" target="_blank">二条城前站</a> 搭乘 <b>地鐵東西線</b>，搭 1 站到 <a href="https://www.google.com/maps/search/?api=1&query=烏丸御池站" class="sta" target="_blank">烏丸御池站</a> (車程 2 分鐘，票價 220 円)，出站步行約 5 分鐘抵達。</div>
+                    </details>
+                </li>
+                <li>16:30～17:45 點心時間：烏丸御池周邊麵包名店
+                    <span style="display:block;"><span class="tag tag-buy">🥐 購買點：<a href="https://www.google.com/maps/search/?api=1&query=ファイブラン" class="rest" target="_blank">fiveran (ファイブラン)</a> & <a href="https://www.google.com/maps/search/?api=1&query=Flip+up!" class="rest" target="_blank">Flip up! (フリップアップ)</a><br>⚠️ 備註：這兩間店都在御金神社走回烏丸御池站的路上。</span></span>
+                </li>
+                <li>17:45 準備搭車前往大阪梅田（準備吃大餐）
+                    <details>
+                        <summary>點擊展開：烏丸御池 ➔ 梅田 轉乘方式</summary>
+                        <div class="details-content">
+                            1️⃣ <b><a href="https://www.google.com/maps/search/?api=1&query=烏丸御池站" class="sta" target="_blank">烏丸御池站</a> ➔ <a href="https://www.google.com/maps/search/?api=1&query=京都站" class="sta" target="_blank">京都站</a>：</b> 搭乘 <b>地鐵烏丸線</b> (車程約 6 分鐘)。<br>
+                            2️⃣ <b><a href="https://www.google.com/maps/search/?api=1&query=京都站" class="sta" target="_blank">京都站</a> ➔ <a href="https://www.google.com/maps/search/?api=1&query=JR大阪站" class="sta" target="_blank">JR大阪站 (梅田)</a>：</b> 轉乘 <b>JR京都線(新快速)</b> (車程約 29 分鐘)。<br>
+                            💰 總票價：地鐵 220 円 + JR 580 円 = 約 800 円
+                        </div>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">晚餐</span>
+            <ul>
+                <li>19:30 🍖 <b>確定預約</b>：<a href="https://www.google.com/maps/search/?api=1&query=Yakiniku+Hormone+Uchida+梅田" class="rest" target="_blank">Yakiniku Hormone Uchida</a>
+                    <span style="display:block;"><span class="tag tag-ticket">📌 預約資訊：3人 / 8月23日 (週日) 下午 7:30</span></span>
+                    <details>
+                        <summary>點擊展開：步行路線</summary>
+                        <div class="details-content">從 <a href="https://www.google.com/maps/search/?api=1&query=JR大阪站" class="sta" target="_blank">JR大阪站</a>/<a href="https://www.google.com/maps/search/?api=1&query=梅田站" class="sta" target="_blank">梅田站</a> 出站後步行前往 (位於梅田堂山町)，非常順路！</div>
+                    </details>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">晚上</span>
+            <ul>
+                <li>吃飽後返回大阪難波
+                    <details>
+                        <summary>點擊展開：返回飯店 交通方式</summary>
+                        <div class="details-content">從 <a href="https://www.google.com/maps/search/?api=1&query=梅田站" class="sta" target="_blank">梅田站</a> 搭乘地鐵御堂筋線至 <a href="https://www.google.com/maps/search/?api=1&query=難波站" class="sta" target="_blank">難波站</a> (車程約 9 分鐘) 💰 票價：240 円</div>
+                    </details>
+                </li>
+                <li>返回：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- =============== DAY 6 =============== -->
+    <div class="card day-card" id="day6">
+        <h2>🗓️ Day 6 (8/24) 輕鬆返程</h2>
+        <div class="time-slot">
+            <span class="slot-title">早餐</span>
+            <ul>
+                <li>出發：<a href="https://www.google.com/maps/search/?api=1&query=NOVI+道頓堀" class="hotel" target="_blank">NOVI 道頓堀</a> (辦理退房)</li>
+                <li>09:00 起床與整理行李</li>
             </ul>
         </div>
         
         <div class="time-slot">
-            <span class="slot-title">梅田商圈旗艦店巡禮</span>
+            <span class="slot-title">午餐</span>
             <ul>
-                <li>📍 <b>必逛百貨/地標：</b>
-                    <a href="https://www.google.com/maps/search/?api=1&query=LUCUA+Osaka" class="shop" target="_blank">LUCUA</a>、
-                    <a href="https://www.google.com/maps/search/?api=1&query=LUCUA+1100" class="shop" target="_blank">LUCUA 1100</a>、
-                    <a href="https://www.google.com/maps/search/?api=1&query=GRAND+FRONT+大阪" class="shop" target="_blank">GRAND FRONT 大阪</a>、
-                    <a href="https://www.google.com/maps/search/?api=1&query=LINKS+UMEDA" class="shop" target="_blank">LINKS UMEDA</a>、
-                    <a href="https://www.google.com/maps/search/?api=1&query=HEP+FIVE" class="spot" target="_blank">HEP FIVE (紅色摩天輪)</a>
+                <li>10:30～12:15 <a href="https://www.google.com/maps/search/?api=1&query=難波站" class="sta" target="_blank">難波</a>周邊早午餐 & 最後採買 (待定)</li>
+            </ul>
+        </div>
+
+        <div class="time-slot">
+            <span class="slot-title">下午</span>
+            <ul>
+                <li>12:45 準備搭車前往機場 (提早 2.5 小時報到)
+                    <details>
+                        <summary>點擊展開：難波 ➔ 機場 交通時刻</summary>
+                        <div class="details-content">
+                            🟠 <b>南海電鐵 (空港急行)：</b><br>
+                             12:40 發車 ➔ 13:25 抵達<br>
+                             12:55 發車 ➔ 13:40 抵達 (🌟最推薦，時間完美銜接 13:45 報到)<br>
+                             13:10 發車 ➔ 13:55 抵達<br><br>
+                            🔵 <b>特急 Rapi:t (需加購特急券)：</b> 12:35、13:05 發車<br>
+                            💰 票價：約 970 円 (若搭特急約 1,490 円)
+                        </div>
+                    </details>
                 </li>
-                <li>📍 <b>梅田/茶屋町 獨立旗艦大樓 (免手續費、高CP)：</b>
-                    <br>• <a href="https://www.google.com/maps/search/?api=1&query=UNIQLO+OSAKA" class="shop" target="_blank">UNIQLO OSAKA</a> & <a href="https://www.google.com/maps/search/?api=1&query=GU+OSAKA" class="shop" target="_blank">GU</a>
-                    <br>• <a href="https://www.google.com/maps/search/?api=1&query=Alpen+OSAKA" class="shop" target="_blank">Alpen OSAKA</a>
-                    <br>• <a href="https://www.google.com/maps/search/?api=1&query=DESCENTE+大阪" class="shop" target="_blank">DESCENTE 大阪旗艦店</a>
-                    <br>• <a href="https://www.google.com/maps/search/?api=1&query=MIZUNO+OSAKA+CHAYAMACHI" class="shop" target="_blank">MIZUNO 茶屋町全球旗艦店</a>
-                    <br>• <a href="https://www.google.com/maps/search/?api=1&query=Onitsuka+Tiger+大阪茶屋町" class="shop" target="_blank">Onitsuka Tiger 茶屋町店</a>
-                    <br>• <a href="https://www.google.com/maps/search/?api=1&query=ARC'TERYX+大阪" class="shop" target="_blank">ARC'TERYX 大阪旗艦店</a>
+                <li>16:15 搭乘 CX565 航班返家，旅途圓滿結束！</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 優惠券專區 -->
+    <div class="card" id="coupons">
+        <h2>🏷️ 購物必備優惠券專區</h2>
+        <p style="font-size:0.85em; color:var(--muted); margin-top:-15px; margin-bottom:20px;">
+            ※ 結帳前請先準備好畫面或票卡，讓你買越多省越多！<br>
+            💡 <b>圖片替換教學：</b>將你的優惠券圖片傳至 GitHub 同資料夾，並將下方代碼內的 <code>src="你的圖片檔名.jpg"</code> 替換掉即可顯示！若嫌麻煩，直接將圖片存在手機相簿結帳時出示也是最快的方法！
+        </p>
+
+        <div class="time-slot" style="border-left-color: #8e44ad;">
+            <span class="slot-title" style="color: #8e44ad; background: #f5eef8;">🏢 百貨公司神卡 (高島屋 / 0101丸井)</span>
+            <ul>
+                <li><b>難波高島屋 (Takashimaya)：</b><br>購物前記得先去服務台，憑護照領取「Hello Kitty 5% OFF 優惠卡」。除了免稅，結帳刷這張卡還能再打 95 折！</li>
+                <li><b>難波 0101 丸井百貨：</b><br>使用 VISA/Mastercard 信用卡結帳，部分檔期可享額外 5% 折扣，購物前請留意館內告示！</li>
+                
+                <!-- Github 圖片預留區 -->
+                <div class="coupon-img-placeholder">
+                    [此為高島屋/丸井 優惠券圖片預留區]<br>
+                    &lt;img src="你的百貨優惠券.jpg" style="width:100%; border-radius:8px;"&gt;
+                </div>
+            </ul>
+        </div>
+
+        <div class="time-slot" style="border-left-color: #e67e22;">
+            <span class="slot-title" style="color: #e67e22; background: #fdf2e9;">👓 眼鏡與藥妝 (JINS / Zoff / 唐吉訶德)</span>
+            <ul>
+                <li><b>JINS / Zoff 眼鏡：</b>可出示專屬 QR Code 或折價券享免稅＋額外折扣 (5~7% 不等，依當期活動為主)。</li>
+                <li><b>唐吉訶德 / 松本清：</b>結帳前掃描旅客專屬條碼，最高可享免稅 10% + 額外 5%~7% 優惠！</li>
+                
+                <!-- Github 圖片預留區 -->
+                <div class="coupon-img-placeholder">
+                    [此為眼鏡/藥妝 優惠券圖片預留區]<br>
+                    &lt;img src="你的藥妝優惠券.jpg" style="width:100%; border-radius:8px;"&gt;
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 拉麵百名店區塊 -->
+    <div class="card" id="ramen">
+        <h2>🍜 食べログ ラーメン百名店 (近三年入選・依地區分類)</h2>
+        <p style="font-size:0.85em; color:var(--muted); margin-top:-15px; margin-bottom:20px;">※ 嚴選近三年獲得 Tabelog Ramen WEST/OSAKA 百名店，且位於行程周邊的頂級神店。</p>
+        
+        <div class="time-slot" style="border-left-color: #e74c3c;">
+            <span class="slot-title" style="color: #e74c3c; background: #fdedec;">📍 京都車站周邊</span>
+            <ul>
+                <li><a href="https://tabelog.com/kyoto/A2601/A260101/26000873/" class="rest" target="_blank">本家 第一旭 本店</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.77</span></span>
+                </li>
+                <li><a href="https://tabelog.com/kyoto/A2601/A260101/26000791/" class="rest" target="_blank">新福菜館 本店</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.75</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot" style="border-left-color: #3498db;">
+            <span class="slot-title" style="color: #3498db; background: #ebf5fb;">📍 梅田車站 / 大阪站周邊</span>
+            <ul>
+                <li><a href="https://tabelog.com/osaka/A2701/A270101/27104786/" class="rest" target="_blank">麦と麺助 新梅田中津店</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.85 (人氣極高)</span></span>
+                </li>
+                <li><a href="https://tabelog.com/osaka/A2701/A270101/27090835/" class="rest" target="_blank">京都 麺屋たけ井 阪急梅田店</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.74</span></span>
+                </li>
+                <li><a href="https://tabelog.com/osaka/A2701/A270101/27101888/" class="rest" target="_blank">銀座 篝 ルクア大阪店</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.73</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot" style="border-left-color: #f1c40f;">
+            <span class="slot-title" style="color: #f39c12; background: #fef5e7;">📍 心齋橋 / 道頓堀周邊</span>
+            <ul>
+                <li><a href="https://tabelog.com/osaka/A2701/A270201/27086438/" class="rest" target="_blank">鶏Soba 座銀 にぼし店</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.75 (位於心齋橋)</span></span>
+                </li>
+                <li><a href="https://tabelog.com/osaka/A2701/A270201/27101889/" class="rest" target="_blank">いかれたヌードル フィッシュトンズ</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.76 (位於心齋橋周邊)</span></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="time-slot" style="border-left-color: #2ecc71;">
+            <span class="slot-title" style="color: #27ae60; background: #eafaf1;">📍 難波車站周邊</span>
+            <ul>
+                <li><a href="https://tabelog.com/osaka/A2701/A270202/27084042/" class="rest" target="_blank">麺屋 丈六 なんば店</a>
+                    <span style="display:block;"><span class="tag tag-info">⭐ Tabelog 評分：3.78</span></span>
                 </li>
             </ul>
         </div>
     </div>
-    
-    <!-- 後續行程省略，請直接貼上即可 -->
+
+    <div class="card" id="cost">
+        <h2>💰 預估花費總結 (每人)</h2>
+        
+        <div class="cost-box">
+            <span class="cost-title text-green">🚆 交通車資預估 (JR/地鐵刷 ICOCA)</span>
+            <ul>
+                <li>Day 1 機場至市區、臨空城來回：約 1,750 円</li>
+                <li>Day 2 大阪市區與梅田往返：約 670 円</li>
+                <li>Day 3 大阪至京都往返、租車分攤：約 5,500 円</li>
+                <li>Day 4 本町購物、泉南煙火往返：約 1,920 円</li>
+                <li>Day 5 嵐山、市區轉乘與回返：約 3,550 円</li>
+                <li>Day 6 難波至關西機場：約 970 円</li>
+                <li class="text-orange">👉 交通總計：約 14,360 円 (約合台幣 3,000 元)</li>
+            </ul>
+        </div>
+
+        <div class="cost-box cost-box-blue">
+            <span class="cost-title text-blue">🍽️ 餐飲花費預估 (含大餐與點心)</span>
+            <ul>
+                <li>Day 1 (大阪燒晚餐)：約 2,000 円</li>
+                <li>Day 2 (丸福 + Tsukada + <b>うな富士 鰻魚飯</b>)：約 10,000 円</li>
+                <li>Day 3 (車站便當 + 琵琶湖 + 京都晚餐)：約 6,500 円</li>
+                <li>Day 4 (木津海鮮丼 + 鰻魚飯)：約 8,000 円</li>
+                <li>Day 5 (嵐山 + 麵包 + <b>Yakiniku Uchida</b>)：約 9,000 円</li>
+                <li>Day 6 (難波早午餐)：約 2,000 円</li>
+                <li class="text-orange">👉 餐飲總計：約 37,500 円 (約合台幣 7,800 元)</li>
+                <li style="font-size:0.8em; color:#777; margin-top:8px; line-height:1.4;">※ 此僅為各餐廳均消之保守估算，實際會依點餐內容有所浮動。</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="source-card card">
+        <h2 style="justify-content: center;">🔗 交通時刻查詢推薦與搭乘路線清單</h2>
+        <div style="margin: 15px 0;">
+            <a href="https://www.jr-odekake.net/" class="link" target="_blank" style="display:inline-block; margin-right:15px;">🚆 JR西日本官方時刻表</a>
+            <a href="https://transit.yahoo.co.jp/" class="link" target="_blank" style="display:inline-block;">🧭 Yahoo!乘換案內</a>
+        </div>
+        
+        <div style="text-align:left; background:#fff; padding:15px; border-radius:8px; margin-bottom:15px; border:1px solid var(--line);">
+            <strong style="color:var(--blue); display:block; margin-bottom:8px;">🚃 本趟旅程涵蓋之主要鐵路線：</strong>
+            <ul style="font-size:0.85em; color:var(--ink); padding-left:10px;">
+                <li><b>【大阪 ⇌ 京都】</b> JR西日本 <strong style="color:#d35400;">「JR京都線」</strong> (搭乘新快速)</li>
+                <li><b>【京都 ⇌ 龜岡/嵐山】</b> JR西日本 <strong style="color:#8e44ad;">「JR嵯峨野線」(山陰本線)</strong></li>
+                <li><b>【機場 ⇌ 市區】</b> 南海電鐵 <strong>「空港急行」</strong> / JR西日本 <strong>「關空快速」</strong></li>
+                <li><b>【大阪 ⇌ 樽井(煙火)】</b> 南海電鐵 <strong>「南海本線」</strong></li>
+                <li><b>【京都 ⇌ 琵琶湖】</b> JR西日本 <strong>「JR湖西線」</strong> (搭乘新快速至近江高島)</li>
+                <li><b>【市區移動】</b> 大阪地下鐵 (御堂筋線、堺筋線、谷町線等)</li>
+            </ul>
+        </div>
+        
+        <p style="font-size:0.85em; color:var(--muted); text-align:left; margin:0;">※ 查詢時刻表時，請直接輸入上述路線或起訖站名。建議出發前一天透過上述網站，再次確認確切發車月台與即時時間，確保行程順暢！</p>
+    </div>
+
 </div>
 </body>
 </html>
