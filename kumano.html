@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>熊野古道朝聖之路 8天7夜</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800;900&family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap');
+
+        :root {
+            --ink:#17212b; --muted:#6b7785; --paper:#f6f7f5; --card:#fff;
+            --line:#e7ebe8; --blue:#2f6f8f; --blue-soft:#eaf4f8;
+            --orange:#d97836; --orange-soft:#fff2e8; --green:#4f8064;
+            --pink:#b55d78; --shadow:0 12px 34px rgba(31,45,55,.08);
+            --shadow-hover:0 18px 44px rgba(31,45,55,.13);
+        }
+        *{box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{
+            margin:0;padding:34px 18px 70px;color:var(--ink);line-height:1.75;
+            font-family:'Noto Sans TC','Noto Sans JP',sans-serif;
+            background:
+              radial-gradient(circle at 8% 0%,rgba(78,126,151,.10),transparent 28rem),
+              radial-gradient(circle at 92% 18%,rgba(217,120,54,.08),transparent 26rem),
+              var(--paper);
+        }
+        .page{width:min(980px,100%);margin:auto}
+
+        /* 預設連結樣式 */
+        a { text-decoration:none; font-weight:700; transition:opacity 0.2s; color:var(--blue); border-bottom:1px solid rgba(47,111,143,.25); }
+        a:hover { opacity:0.7; }
+
+        /* ================= 超連結顏色分類 ================= */
+        a.shop  { color: #6b8e23; border-bottom-color: rgba(107,142,35,.3); }   /* 抹茶色：購物景點 */
+        a.spot  { color: #b58253; border-bottom-color: rgba(181,130,83,.3); }   /* 奶茶色：其他景點 */
+        a.rest  { color: #d49a00; border-bottom-color: rgba(212,154,0,.3); }    /* 黃金色：餐廳 */
+        a.sta   { color: #2980b9; border-bottom-color: rgba(41,128,185,.3); }   /* 藍色：車站 */
+        a.hotel { color: #7d3c98; border-bottom-color: rgba(125,60,152,.3); }   /* 高貴紫：飯店 */
+        a.link  { color: #8e44ad; border-bottom-color: rgba(142,68,173,.3); }   /* 一般連結紫 */
+        /* ================================================== */
+
+        .hero{
+            position:relative;overflow:hidden;color:#fff;border-radius:28px;padding:42px 40px 36px;
+            margin-bottom:18px;
+            background:linear-gradient(135deg,rgba(22,55,72,.96),rgba(55,102,119,.9) 58%,rgba(208,112,54,.82));
+            box-shadow:0 20px 55px rgba(24,49,62,.20)
+        }
+        .hero:before{content:"道";position:absolute;right:-18px;top:-42px;font-size:220px;font-weight:900;line-height:1;opacity:.07}
+        .hero-kicker{
+            display:inline-flex;padding:6px 12px;border:1px solid rgba(255,255,255,.25);
+            border-radius:999px;background:rgba(255,255,255,.10);font-size:.82rem;letter-spacing:.08em
+        }
+        .hero h1{margin:14px 0 8px;font-size:clamp(2rem,5vw,3.2rem);line-height:1.2;letter-spacing:-.03em;font-weight:900}
+        .hero p{margin:0;max-width:720px;color:rgba(255,255,255,.86);font-size:1rem}
+        .hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:26px}
+        .hero-stat{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.13);backdrop-filter:blur(8px)}
+        .hero-stat strong{display:block;color:#fff;font-size:1.05rem}
+        .hero-stat span{display:block;color:rgba(255,255,255,.68);font-size:.76rem}
+
+        .day-nav{
+            position:sticky;top:12px;z-index:10;display:flex;gap:7px;overflow-x:auto;
+            padding:9px;margin-bottom:18px;background:rgba(246,247,245,.88);
+            border:1px solid #e1e7e4;border-radius:16px;backdrop-filter:blur(14px);
+            box-shadow:0 8px 24px rgba(31,45,55,.06);scrollbar-width:none
+        }
+        .day-nav::-webkit-scrollbar{display:none}
+        .day-nav a{flex:0 0 auto;border:0;padding:7px 13px;border-radius:999px;background:#fff;color:var(--muted);font-size:.82rem;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+        .day-nav a:hover{color:#fff;background:var(--blue)}
+
+        .card{
+            background:rgba(255,255,255,.95);border:1px solid #e2e7e4;border-radius:18px;
+            padding:28px;margin-bottom:20px;box-shadow:var(--shadow)
+        }
+        .card:hover{box-shadow:var(--shadow-hover)}
+        .card h2{
+            display:flex;align-items:center;gap:10px;margin:0 0 22px;padding-bottom:14px;
+            border-bottom:1px solid var(--line);color:var(--ink);font-size:1.35rem;line-height:1.35
+        }
+        .card h2:after{content:"";flex:1;height:3px;max-width:48px;margin-left:auto;border-radius:999px;background:linear-gradient(90deg,var(--orange),#efbd86)}
+        ul{list-style:none;margin:0;padding:0}
+        li{position:relative;margin-bottom:13px;padding-left:23px}
+        li:before{content:"";position:absolute;left:4px;top:.78em;width:7px;height:7px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 4px var(--blue-soft)}
+        li:last-child{margin-bottom:0}
+        .legend{margin:16px 0 0;font-size:.82rem;color:var(--muted)}
+        .legend a{cursor:default}
+
+        .day-card{scroll-margin-top:80px;overflow:hidden}
+        .day-card>h2{margin:-28px -28px 24px;padding:21px 28px;border:0;color:#fff;background:linear-gradient(135deg,#214d63,#37738d)}
+        .day-card.d3>h2,.day-card.d7>h2{background:linear-gradient(135deg,#596d63,#789582)}
+        .day-card.d4>h2,.day-card.d6>h2{background:linear-gradient(135deg,#6b5562,#9b687a)}
+        .day-card.d5>h2,.day-card.d8>h2{background:linear-gradient(135deg,#6c604a,#a08a62)}
+        .day-card>h2:after{background:rgba(255,255,255,.38)}
+
+        .time-slot{position:relative;margin:0 0 21px;padding:18px 20px 18px 21px;border:1px solid var(--line);border-radius:15px;background:#fff}
+        .time-slot:last-child{margin-bottom:0}
+        .time-slot:before{content:"";position:absolute;left:0;top:18px;bottom:18px;width:4px;border-radius:0 5px 5px 0;background:var(--blue)}
+        .slot-title{display:inline-flex;align-items:center;gap:6px;margin-bottom:12px;padding:5px 11px;border-radius:999px;color:var(--blue);background:var(--blue-soft);font-size:.84rem;font-weight:800}
+        .slot-title:before{content:"◷"}
+
+        details{margin-top:10px;overflow:hidden;border:1px solid var(--line);border-radius:11px;background:#fafcfb}
+        summary{cursor:pointer;padding:9px 12px;color:var(--blue);font-size:.83rem;font-weight:800;list-style:none}
+        summary::-webkit-details-marker{display:none}
+        summary:before{content:"＋";margin-right:6px;color:var(--orange)}
+        details[open] summary:before{content:"－"}
+        .details-content{padding:11px 13px 13px;border-top:1px solid var(--line);color:var(--muted);background:#fff;font-size:.86rem}
+        .details-content b{color:var(--ink)}
+
+        .tag{display:inline-block;margin-top:8px;padding:4px 10px;border-radius:8px;font-size:.78rem;line-height:1.55}
+        .tag-buy{color:#a8551f;background:var(--orange-soft);border-left:3px solid var(--orange)}
+        .tag-ticket{color:#93405d;background:#fff0f4;border-left:3px solid var(--pink)}
+        .tag-info{color:#986118;background:#fff7e5;border-left:3px solid #e4a22a}
+
+        hr{border:0;border-top:1px dashed var(--line);margin:0 0 12px}
+
+        @media(max-width:680px){
+            body{padding:16px 10px 45px}.hero{padding:30px 23px 25px;border-radius:22px}.hero h1{font-size:2rem}
+            .hero-stats{grid-template-columns:repeat(2,1fr)}.card{padding:19px;border-radius:15px}
+            .day-card>h2{margin:-19px -19px 20px;padding:18px 19px;font-size:1.15rem}
+            .time-slot{padding:15px 14px 15px 17px}
+        }
+
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="hero">
+        <div class="hero-kicker">⛩️ 11/18 — 11/25 · 和歌山 8天7夜</div>
+        <h1>熊野古道朝聖之路</h1>
+        <p>高野山、白濱、瀞峽、熊野三山——點地名即可直接開啟 Google Maps。</p>
+        <div class="hero-stats">
+            <div class="hero-stat"><strong>8 天 7 夜</strong><span>11/18 (三) — 11/25 (三)</span></div>
+            <div class="hero-stat"><strong>≒ 7 ㎞</strong><span>發心門王子 → 熊野本宮大社</span></div>
+            <div class="hero-stat"><strong>≒ 2.5 ㎞</strong><span>大門坂 → 那智瀑布</span></div>
+            <div class="hero-stat"><strong>⛩️ 熊野三山</strong><span>本宮・速玉・那智</span></div>
+        </div>
+    </header>
+
+    <nav class="day-nav" aria-label="行程快速導覽">
+        <a href="#day1">DAY 1</a><a href="#day2">DAY 2</a><a href="#day3">DAY 3</a><a href="#day4">DAY 4</a>
+        <a href="#day5">DAY 5</a><a href="#day6">DAY 6</a><a href="#day7">DAY 7</a><a href="#day8">DAY 8</a>
+        <a href="#memo">📌 預約 &amp; 手帳</a>
+    </nav>
+
+    <div class="card">
+        <h2>✈️ 航班與住宿</h2>
+        <ul>
+            <li>去程：11/18 (三) 14:55 Osaka（<a href="https://www.google.com/maps/search/?api=1&query=關西國際機場" class="sta" target="_blank">關西機場</a>）</li>
+            <li>回程：11/25 (三) 16:15 Osaka → 18:30 Taipei</li>
+            <li>住宿：<a href="https://www.google.com/maps/search/?api=1&query=東横INN+JR和歌山駅東口" class="hotel" target="_blank">東橫 inn</a> 〒640-8341（11/18、11/19、11/24）</li>
+            <li>住宿：<a href="https://www.google.com/maps/search/?api=1&query=ホテルニューパレス+新宮市" class="hotel" target="_blank">New palace Hotel</a>（11/20、11/21、11/22）</li>
+            <li>住宿：<a href="https://www.google.com/maps/search/?api=1&query=亀の井ホテル+那智勝浦" class="hotel" target="_blank">龜之井酒店</a>（11/23）</li>
+        </ul>
+        <p class="legend">連結顏色：<a class="spot">景點</a>　<a class="shop">購物</a>　<a class="sta">車站</a>　<a class="hotel">飯店</a></p>
+    </div>
+
+<div class="card day-card d1" id="day1"><h2>🗓️ Day 1 (11/18 三) 關西機場 → 東橫 inn → 貴志駅</h2><div class="time-slot"><span class="slot-title">航班與移動</span><ul><li>14:55 Osaka</li><li><a href="https://www.google.com/maps/search/?api=1&query=關西國際機場" class="sta" target="_blank">關西機場</a> → <a href="https://www.google.com/maps/search/?api=1&query=東横INN+JR和歌山駅東口" class="hotel" target="_blank">東橫 inn</a>　43 分 ¥1,400</li></ul></div><div class="time-slot"><span class="slot-title">下午 (2 選 1)</span><ul><li><a href="https://www.google.com/maps/search/?api=1&query=東横INN+JR和歌山駅東口" class="hotel" target="_blank">東橫 inn</a> → <a href="https://www.google.com/maps/search/?api=1&query=貴志駅" class="sta" target="_blank">貴志駅</a> <b>(貓站長貴志站電車體驗)</b><span style="display:block;"><span class="tag tag-info">🚃 下午 17:31 → 下午 18:09 - <a href="https://www.google.com/maps/search/?api=1&query=和歌山電鐵+貴志川線+和歌山駅" class="sta" target="_blank">和歌山電鐵貴志川線</a>　38 分 ¥480</span></span></li><li><hr><b>Or</b>　Check-in → 附近賣場採購 &amp; 吃晚餐</li></ul></div><div class="time-slot"><span class="slot-title">住宿</span><ul><li>🏨 <a href="https://www.google.com/maps/search/?api=1&query=東横INN+JR和歌山駅東口" class="hotel" target="_blank">東橫 inn</a></li></ul></div></div><div class="card day-card d2" id="day2"><h2>🗓️ Day 2 (11/19 四) 高野山 Koyasan</h2><div class="time-slot"><span class="slot-title">路線</span><ul><li><a href="https://www.google.com/maps/search/?api=1&query=東横INN+JR和歌山駅東口" class="hotel" target="_blank">東橫 inn</a> → 租車 → 1hr14min → <a href="https://www.google.com/maps/search/?api=1&query=高野山" class="spot" target="_blank">高野山 Koyasan</a> 〒648-0211 → <a href="https://www.google.com/maps/search/?api=1&query=モンベル+イオンモール和歌山店" class="shop" target="_blank">Montbell</a> 〒640-8454</li></ul></div><div class="time-slot"><span class="slot-title">高野山</span><ul><li>搭乘景觀列車與纜車，前往神聖的「<b><a href="https://www.google.com/maps/search/?api=1&query=高野山" class="spot" target="_blank">高野山</a></b>」。漫步穿越雄偉的「<a href="https://www.google.com/maps/search/?api=1&query=高野山+大門" class="spot" target="_blank">大門</a>」，感受通往靈性世界的入口。探索真言宗佛教的歷史中心「<a href="https://www.google.com/maps/search/?api=1&query=高野山+壇上伽藍" class="spot" target="_blank">壇上伽藍</a>」。參訪真言宗的行政核心「<a href="https://www.google.com/maps/search/?api=1&query=金剛峯寺" class="spot" target="_blank">金剛峯寺</a>」。</li><li>體驗日本最大的墓地與弘法大師陵墓「<b><a href="https://www.google.com/maps/search/?api=1&query=高野山+奥之院" class="spot" target="_blank">奧之院</a></b>」的莊嚴氛圍。<span style="display:block;"><span class="tag tag-ticket">📖 「<a href="https://www.google.com/maps/search/?api=1&query=高野山宿坊協会+中央案内所" class="spot" target="_blank">高野山宿坊協會中央案內所</a>」索取「共通巡禮手帳」<br>鄰近 <a href="https://www.google.com/maps/search/?api=1&query=千手院橋+バス停+高野山" class="sta" target="_blank">高野山千手院公車站</a></span></span></li></ul></div></div><div class="card day-card d3" id="day3"><h2>🗓️ Day 3 (11/20 五) 白濱 → 瀞峽 → 新宮</h2><div class="time-slot"><span class="slot-title">路線</span><ul><li><a href="https://www.google.com/maps/search/?api=1&query=東横INN+JR和歌山駅東口" class="hotel" target="_blank">東橫 inn</a> → 租車 → 1hr18min → 【<a href="https://www.google.com/maps/search/?api=1&query=白浜町" class="spot" target="_blank">白濱</a>】 → 1hrs34min → <a href="https://www.google.com/maps/search/?api=1&query=瀞峡" class="spot" target="_blank">瀞峽</a> 52 分 → <a href="https://www.google.com/maps/search/?api=1&query=ホテルニューパレス+新宮市" class="hotel" target="_blank">New palace Hotel</a></li><li><a href="https://www.google.com/maps/search/?api=1&query=東横INN+JR和歌山駅東口" class="hotel" target="_blank">東橫 inn</a> → 租車 → 1hr <a href="https://www.google.com/maps/search/?api=1&query=紀伊田辺駅" class="sta" target="_blank">紀伊田辺駅</a> 〒646-0031<span style="display:block;"><span class="tag tag-ticket">📖 「<a href="https://www.google.com/maps/search/?api=1&query=田辺市観光センター+紀伊田辺駅" class="spot" target="_blank">起點旅客中心</a>」索取「共通巡禮手帳」</span></span></li></ul></div><div class="time-slot"><span class="slot-title">瀞峡川舟巡遊（瀞峡巡り）基本情報</span><ul><li>Doro Kyo Gorge　<a href="https://www.google.com/maps/search/?api=1&query=瀞峡めぐり+乗船場+玉置口" class="spot" target="_blank">瀞峡めぐり乗船場</a> 〒647-1231<span style="display:block;"><span class="tag tag-ticket">📌 事前預約</span></span></li><li><b>乘船地點：</b>三重縣與奈良縣交界的和歌山縣飛地「玉置口」</li><li><b>運行期間：</b>每年 3/1～11/30<br>※每週一停駛（若週一為國定假日則照常運行，改為隔日停駛）<br>※如遇乾旱、水位暴增等天候狀況，有可能臨時取消出航<br>※雨天照常營運，請自備雨具</li><li><b>出航時間：</b>每日上午 9 點起，一日 6 班（9:00, 10:00, 11:00, 13:00, 14:00, 15:00）</li><li><b>所需時間：</b>約 40 分鐘</li><li><b>票價：</b>成人 3000 日圓｜4 歲以上小學生 1,500 日圓<br>※當日付款。請於玉置口的指揮中心進行。</li><li><b>預約聯絡：</b><a href="https://www.google.com/maps/search/?api=1&query=熊野川川舟センター" class="spot" target="_blank">熊野川川舟センター</a> ☎ <a href="tel:0735440987" class="link">0735-44-0987</a></li></ul></div><div class="time-slot"><span class="slot-title">白濱景點</span><ul><li>【<a href="https://www.google.com/maps/search/?api=1&query=円月島" class="spot" target="_blank">圓月島</a>】：白濱的象徵，欣賞海蝕洞中鑲嵌著落日的絕美時刻（〒649-2211 拍照點）。</li><li>【<a href="https://www.google.com/maps/search/?api=1&query=千畳敷+白浜" class="spot" target="_blank">千畳敷</a>】由海浪長期侵蝕砂岩形成的巨大岩石平臺，因形似千層鋪疊的榻榻米而得名。這裡視野開闊，可眺望湛藍太平洋與壯麗夕陽，是欣賞海岸地貌與拍照留念的熱門景點。</li><li>→【<a href="https://www.google.com/maps/search/?api=1&query=獅子岩" class="spot" target="_blank">獅子岩</a>】→【<a href="https://www.google.com/maps/search/?api=1&query=三段壁" class="spot" target="_blank">三段壁</a>】是白濱著名的海岸奇觀，由高約 50 米的斷崖沿海岸線延伸而成。海浪拍擊巖壁，氣勢磅礴。崖下設有<a href="https://www.google.com/maps/search/?api=1&query=三段壁洞窟" class="spot" target="_blank">探險洞窟</a>，可體驗海蝕地形的震撼。〒649-2211</li><li>【<a href="https://www.google.com/maps/search/?api=1&query=とれとれ市場+白浜" class="shop" target="_blank">白濱 Toretore 市場</a>】：海鮮新鮮豐富，邊逛邊吃，還能欣賞鮪魚解體秀。〒649-2201</li></ul></div><div class="time-slot"><span class="slot-title">住宿</span><ul><li>🏨 <a href="https://www.google.com/maps/search/?api=1&query=ホテルニューパレス+新宮市" class="hotel" target="_blank">New palace Hotel</a></li></ul></div></div><div class="card day-card d4" id="day4"><h2>🗓️ Day 4 (11/21 六) 熊野古道：發心門王子 → 熊野本宮大社</h2><div class="time-slot"><span class="slot-title">路線</span><ul><li><a href="https://www.google.com/maps/search/?api=1&query=新宮駅" class="sta" target="_blank">新宮駅</a>　1 小時 49 分 ¥2,100　<a href="https://www.google.com/maps/search/?api=1&query=発心門王子" class="spot" target="_blank">發心門王子</a> → 熊野古道<span style="display:block;"><span class="tag tag-ticket">🖋️ 蓋完章 → <a href="https://www.google.com/maps/search/?api=1&query=熊野本宮大社" class="spot" target="_blank">熊野本宮大社</a> 申請證書</span></span><span style="display:block;"><span class="tag tag-ticket">📖 「<a href="https://www.google.com/maps/search/?api=1&query=新宮市観光案内所+新宮駅前" class="spot" target="_blank">JR 新宮駅對面新宮市觀光案內所</a>」索取「共通巡禮手帳」</span></span></li><li>（<a href="https://www.google.com/maps/search/?api=1&query=発心門王子" class="spot" target="_blank">發心門王子</a> 〒647-1744 → <a href="https://www.google.com/maps/search/?api=1&query=熊野本宮大社" class="spot" target="_blank">熊野本宮大社</a>　＊新手路線 ≒ 7 ㎞ → 2.5hrs）<details><summary>點擊展開：路線介紹</summary><div class="details-content">熊野古道上的這段路程裡有許多森林小徑和與世隔絕的山頂村莊。沿途可以看到全景。<a href="https://www.google.com/maps/search/?api=1&query=発心門王子" class="spot" target="_blank">發心門王子</a>被稱為「覺悟之門」，是熊野本宮大社神域最外面的入口。這條路線從此處穿過發心門村，通往<a href="https://www.google.com/maps/search/?api=1&query=水呑王子" class="spot" target="_blank">水吞王子</a>。沿途請留意民間的藝術字雕。小徑穿過水吞王子森林（這是一座校舍的舊址），來到遍佈茶園和梯田的伏拜村西端。第一眼看到遠處山谷中的大神社後，朝聖者們跪下祈禱的地方就是<a href="https://www.google.com/maps/search/?api=1&query=伏拝王子" class="spot" target="_blank">伏拜王子</a>。這裡設有帶頂棚的休息區，當地人會在此處提供手工製作的小吃和用溫泉水沖泡的咖啡（營業日可能有所更動）。從這裡開始，小徑穿過森林，經過<a href="https://www.google.com/maps/search/?api=1&query=三軒茶屋跡+熊野古道" class="spot" target="_blank">三軒茶屋</a>，到達古樸的<a href="https://www.google.com/maps/search/?api=1&query=熊野本宮大社" class="spot" target="_blank">熊野本宮大社</a>。三軒茶屋和熊野本宮大社中間有一條通往觀景台的短徑，別錯過了來此觀景台一探究竟！</div></details></li></ul></div><div class="time-slot"><span class="slot-title">住宿</span><ul><li>🏨 <a href="https://www.google.com/maps/search/?api=1&query=ホテルニューパレス+新宮市" class="hotel" target="_blank">New palace Hotel</a></li></ul></div></div><div class="card day-card d5" id="day5"><h2>🗓️ Day 5 (11/22 日) 速玉大社・鬼ヶ城・熊野川輕舟</h2><div class="time-slot"><span class="slot-title">速玉大社</span><ul><li><a href="https://www.google.com/maps/search/?api=1&query=新宮駅" class="sta" target="_blank">新宮駅</a> 步行 20 分 → <a href="https://www.google.com/maps/search/?api=1&query=熊野速玉大社" class="spot" target="_blank">速玉大社</a> 〒647-0081</li><li><a href="https://www.google.com/maps/search/?api=1&query=ホテルニューパレス+新宮市" class="hotel" target="_blank">New palace Hotel</a> → <a href="https://www.google.com/maps/search/?api=1&query=熊野速玉大社" class="spot" target="_blank">速玉大社</a> 步行 13 分</li></ul></div><div class="time-slot"><span class="slot-title">鬼ヶ城</span><ul><li><a href="https://www.google.com/maps/search/?api=1&query=新宮駅" class="sta" target="_blank">新宮駅</a> → 1 小時 25 分 ¥1,070　<a href="https://www.google.com/maps/search/?api=1&query=鬼ヶ城+熊野市" class="spot" target="_blank">鬼ヶ城</a> 〒519-4323（海邊）</li><li><a href="https://www.google.com/maps/search/?api=1&query=新宮駅" class="sta" target="_blank">新宮駅</a> → <a href="https://www.google.com/maps/search/?api=1&query=ホテルニューパレス+新宮市" class="hotel" target="_blank">New palace Hotel</a> 3 分</li><li><b>鬼ヶ城</b>大自然的天然美景.鬼斧神工.連連讚嘆不已;也是聯合國教科文組織世界遺產 2004 年 7 月,登記為「紀伊山地的聖地及參拜道」的一部分;1935 年(昭和 10 年)被指定為國家天然紀念物,日本的 100 處風景。<span style="display:block;"><span class="tag tag-info">⚠️ 沿海邊山壁步道行走路窄且圍欄有些鏽蝕,行走時請小心安全。需要原路返回-如搭火車可從東口走到西口離開再走到<a href="https://www.google.com/maps/search/?api=1&query=熊野市駅" class="sta" target="_blank">熊野市火車站</a>,可帶些點心及飲料沿途也有可休息處,絕對值得到此一遊。</span></span></li></ul></div><div class="time-slot"><span class="slot-title">熊野川・輕舟遊覽</span><ul><li><a href="https://www.google.com/maps/search/?api=1&query=熊野川川舟センター" class="spot" target="_blank">熊野川川舟センター</a> 〒647-1211</li><li><a href="https://www.google.com/maps/search/?api=1&query=新宮駅" class="sta" target="_blank">新宮駅</a> → <a href="https://www.google.com/maps/search/?api=1&query=熊野川川舟センター" class="spot" target="_blank">熊野川川舟センター</a>　<b>51</b>　32 分 ¥230</li><li><b>熊野川•輕舟遊覽</b> → <b><a href="https://www.google.com/maps/search/?api=1&query=熊野速玉大社" class="spot" target="_blank">熊野速玉大社</a></b>附近的<a href="https://www.google.com/maps/search/?api=1&query=権現河原+新宮市" class="spot" target="_blank">權現河原</a>附近靠岸。<span style="display:block;"><span class="tag tag-ticket">📌 需要預約</span></span><details><summary>點擊展開：輕舟遊覽介紹</summary><div class="details-content">古代皇宮貴族們由熊野本宮大社前往熊野速玉大社參拜的這段路途，主要是經由水路搭乘木船前往目的地。現在的熊野川重現了古代風華，讓來訪的遊客也能親身體驗水上參拜道的魅力。從公路休息站「<a href="https://www.google.com/maps/search/?api=1&query=道の駅+瀞峡街道+熊野川" class="spot" target="_blank">瀞峡街道熊野川</a>」搭乘觀光木船，經過約 90 分鐘的愜意航程，最後在熊野速玉大社附近的權現河原附近靠岸。遊客悠閒地坐在遊船上眺望著世界遺產・水上熊野古道的秀麗風情，聽著船夫訴說古道的過往歷史與故事，彷彿自己也化身成了平安時代的皇宮貴族，享受著優美景致與自在氛圍。</div></details></li><li><b>營業時間：</b>9:00-17:00（需要預約）</li><li><b>休息日：</b>無休（冬季 12～2 月停航）</li><li><b>金額：</b>成人 4950 日元、兒童（4 歲〜小學生）2200 日元，信用卡支付 不可</li><li><b>備註：</b>上午航次 10:00、下午航次 14:30 出航</li></ul></div><div class="time-slot"><span class="slot-title">住宿</span><ul><li>🏨 <a href="https://www.google.com/maps/search/?api=1&query=ホテルニューパレス+新宮市" class="hotel" target="_blank">New palace Hotel</a></li></ul></div></div><div class="card day-card d6" id="day6"><h2>🗓️ Day 6 (11/23 一) 熊野古道：大門坂 → 那智瀑布</h2><div class="time-slot"><span class="slot-title">早上</span><ul><li><b>早上 Check-out 寄放行李</b></li><li><a href="https://www.google.com/maps/search/?api=1&query=新宮駅" class="sta" target="_blank">新宮駅</a>　W7:50 → 8:56　1hrs6min ¥750　<a href="https://www.google.com/maps/search/?api=1&query=大門坂" class="spot" target="_blank">大門坂</a> → 熊野古道</li></ul></div><div class="time-slot"><span class="slot-title">熊野古道</span><ul><li><b>熊野古道</b>（<b><a href="https://www.google.com/maps/search/?api=1&query=大門坂" class="spot" target="_blank">大門坂</a></b> 〒649-5301 → <a href="https://www.google.com/maps/search/?api=1&query=熊野那智大社" class="spot" target="_blank">那智大社</a> &amp; <a href="https://www.google.com/maps/search/?api=1&query=那智山青岸渡寺" class="spot" target="_blank">青岸渡寺</a> → <a href="https://www.google.com/maps/search/?api=1&query=那智の滝" class="spot" target="_blank">那智瀑布</a>　＊經典路線 ≒ 2.5 ㎞ → 1hr）<details><summary>點擊展開：路線介紹</summary><div class="details-content">「<a href="https://www.google.com/maps/search/?api=1&query=大門坂" class="spot" target="_blank">大門坂</a>」是通往「<a href="https://www.google.com/maps/search/?api=1&query=熊野那智大社" class="spot" target="_blank">熊野那智大社</a>」、全長約 500 公尺的古參道。長滿青苔的石板坡道與階梯兩旁，各矗立著 100 多棵樹齡超過 800 年的老杉樹。這片景致是被列入世界遺產的「熊野三山」（<a href="https://www.google.com/maps/search/?api=1&query=熊野本宮大社" class="spot" target="_blank">熊野本宮大社</a>、<a href="https://www.google.com/maps/search/?api=1&query=熊野速玉大社" class="spot" target="_blank">熊野速玉大社</a>、<a href="https://www.google.com/maps/search/?api=1&query=熊野那智大社" class="spot" target="_blank">熊野那智大社</a>）參拜路線「熊野古道」的代表性景點。沿著大門坂及參道前往「<a href="https://www.google.com/maps/search/?api=1&query=熊野那智大社" class="spot" target="_blank">熊野那智大社</a>」與「<a href="https://www.google.com/maps/search/?api=1&query=那智山青岸渡寺" class="spot" target="_blank">那智山青岸渡寺</a>」，再以「<a href="https://www.google.com/maps/search/?api=1&query=那智の滝" class="spot" target="_blank">那智瀑布</a>」為終點，全長約 1.3 公里的路線，能充分感受熊野古道的氛圍，是相當熱門的散步路線。那智山表參道周邊有伴手禮店與茶屋，很適合途中休息。回程也可從瀑布附近搭乘巴士返回<a href="https://www.google.com/maps/search/?api=1&query=大門坂駐車場" class="sta" target="_blank">大門坂停車場</a>。大門坂入口附近有兩棵格外高大的<a href="https://www.google.com/maps/search/?api=1&query=大門坂+夫婦杉" class="spot" target="_blank">夫婦杉</a>，並排矗立宛如一道門。位於夫婦杉前方的休息處「<a href="https://www.google.com/maps/search/?api=1&query=大門坂茶屋" class="spot" target="_blank">大門坂茶屋</a>」提供平安時代服飾租借方案。身穿色彩鮮豔的服飾漫步石板路，彷彿就能體驗古代旅人的心情。</div></details></li></ul></div><div class="time-slot"><span class="slot-title">回程與住宿</span><ul><li>→ <a href="https://www.google.com/maps/search/?api=1&query=新宮駅" class="sta" target="_blank">新宮駅</a>【取行李、取租車 → <a href="https://www.google.com/maps/search/?api=1&query=亀の井ホテル+那智勝浦" class="hotel" target="_blank">龜之井酒店</a>】→ <a href="https://www.google.com/maps/search/?api=1&query=勝浦漁港にぎわい市場" class="shop" target="_blank">勝浦漁港にぎわい市場</a> 步行 3 分</li><li><a href="https://www.google.com/maps/search/?api=1&query=紀伊勝浦駅" class="sta" target="_blank">紀伊勝浦駅</a> → <a href="https://www.google.com/maps/search/?api=1&query=亀の井ホテル+那智勝浦" class="hotel" target="_blank">龜之井酒店</a> 步行 9 分</li><li>🏨 <a href="https://www.google.com/maps/search/?api=1&query=亀の井ホテル+那智勝浦" class="hotel" target="_blank">龜之井酒店</a></li></ul></div></div><div class="card day-card d7" id="day7"><h2>🗓️ Day 7 (11/24 二) 租車回和歌山市</h2><div class="time-slot"><span class="slot-title">路線</span><ul><li>→ 租車回和歌山市 ≒ 3hrs → <a href="https://www.google.com/maps/search/?api=1&query=東横INN+JR和歌山駅東口" class="hotel" target="_blank">東橫 inn</a></li><li><a href="https://www.google.com/maps/search/?api=1&query=道の駅+くちくまの" class="spot" target="_blank">道の駅くちくまの</a> 〒649-2104　休息站</li></ul></div><div class="time-slot"><span class="slot-title">回程南海市景點</span><ul><li>→ <a href="https://www.google.com/maps/search/?api=1&query=藤白神社" class="spot" target="_blank">藤白神社</a>　2.5hrs　〒642-0034</li><li>→ <a href="https://www.google.com/maps/search/?api=1&query=番所庭園" class="spot" target="_blank">番所庭園</a>　33min　〒641-0062　<a href="https://www.google.com/maps/search/?api=1&query=番所ノ鼻+和歌山市" class="spot" target="_blank">番所ノ鼻</a></li><li>番所庭園　20min → <a href="https://www.google.com/maps/search/?api=1&query=東横INN+JR和歌山駅東口" class="hotel" target="_blank">東橫 inn</a> 〒640-8341</li></ul></div><div class="time-slot"><span class="slot-title">住宿</span><ul><li>🏨 <a href="https://www.google.com/maps/search/?api=1&query=東横INN+JR和歌山駅東口" class="hotel" target="_blank">東橫 inn</a></li></ul></div></div><div class="card day-card d8" id="day8"><h2>🗓️ Day 8 (11/25 三) 和歌山城 → 返程</h2><div class="time-slot"><span class="slot-title">和歌山城</span><ul><li><a href="https://www.google.com/maps/search/?api=1&query=東横INN+JR和歌山駅東口" class="hotel" target="_blank">東橫 inn</a> → <a href="https://www.google.com/maps/search/?api=1&query=和歌山城" class="spot" target="_blank">和歌山城</a> 〒640-8146　23 分 ¥230</li><li><a href="https://www.google.com/maps/search/?api=1&query=和歌山城+西之丸庭園+紅葉渓庭園" class="spot" target="_blank">紅葉溪庭園</a> 〒640-8146　和歌山城内步行 7 分</li></ul></div><div class="time-slot"><span class="slot-title">返程</span><ul><li><a href="https://www.google.com/maps/search/?api=1&query=東横INN+JR和歌山駅東口" class="hotel" target="_blank">東橫 inn</a> → <a href="https://www.google.com/maps/search/?api=1&query=關西國際機場" class="sta" target="_blank">關西機場</a>　43 分 ¥1,400</li><li>✈️ <b>16:15</b> Osaka → <b>18:30</b> Taipei</li></ul></div></div>
+
+    <div class="card" id="memo">
+        <h2>📌 預約事項 &amp; 共通巡禮手帳</h2>
+        <div class="time-slot">
+            <span class="slot-title">需要預約</span>
+            <ul>
+                <li>11/20 <a href="https://www.google.com/maps/search/?api=1&query=瀞峡めぐり+乗船場+玉置口" class="spot" target="_blank">瀞峡川舟巡遊（瀞峡巡り）</a>：事前預約｜<a href="https://www.google.com/maps/search/?api=1&query=熊野川川舟センター" class="spot" target="_blank">熊野川川舟センター</a> ☎ <a href="tel:0735440987" class="link">0735-44-0987</a></li>
+                <li>11/22 <a href="https://www.google.com/maps/search/?api=1&query=熊野川川舟センター" class="spot" target="_blank">熊野川川舟センター</a> 熊野川•輕舟遊覽：需要預約｜上午航次 10:00、下午航次 14:30</li>
+            </ul>
+        </div>
+        <div class="time-slot">
+            <span class="slot-title">「共通巡禮手帳」索取地點</span>
+            <ul>
+                <li>11/19 <a href="https://www.google.com/maps/search/?api=1&query=高野山宿坊協会+中央案内所" class="spot" target="_blank">高野山宿坊協會中央案內所</a>（鄰近高野山千手院公車站）</li>
+                <li>11/20 <a href="https://www.google.com/maps/search/?api=1&query=田辺市観光センター+紀伊田辺駅" class="spot" target="_blank">起點旅客中心</a>（<a href="https://www.google.com/maps/search/?api=1&query=紀伊田辺駅" class="sta" target="_blank">紀伊田辺駅</a> 〒646-0031）</li>
+                <li>11/21 <a href="https://www.google.com/maps/search/?api=1&query=新宮市観光案内所+新宮駅前" class="spot" target="_blank">新宮市觀光案內所</a>（JR 新宮駅對面）</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
